@@ -1,0 +1,7 @@
+# Local-only Worker values. Do not commit a populated .dev.vars file.
+MAIL_FROM=Make India Foundation <hello@makeindiafoundation.org>
+MAIL_TO=makeindialab@gmail.com
+SHEET_ID=your_google_sheet_id
+SHEET_RANGE=Sheet1!A:I
+GOOGLE_SERVICE_ACCOUNT_EMAIL=service-account@project.iam.gserviceaccount.com
+GOOGLE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\\n...\\n-----END PRIVATE KEY-----\\n"

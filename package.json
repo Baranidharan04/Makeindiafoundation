@@ -1,0 +1,21 @@
+{
+  "name": "make-india-foundation-site",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "build:css": "tailwindcss -c tailwind.config.cjs -i src/styles.css -o public/site.css --minify",
+    "dev": "node server.mjs",
+    "start": "node server.mjs",
+    "dev:worker": "npx wrangler dev",
+    "deploy:worker": "npx wrangler deploy"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14",
+    "tailwindcss": "^3.4.17"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "googleapis": "^178.0.0",
+    "nodemailer": "^10.0.3"
+  }
+}

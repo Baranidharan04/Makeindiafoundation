@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STEM Spark Studio - Make India Foundation</title>
+    
+    <!-- Scripts & Styles -->
+    <script src="public/js/react.production.min.js"></script>
+    <script src="public/js/react-dom.production.min.js"></script>
+    <script src="public/js/babel.min.js"></script>
+    <script src="public/js/lucide.js"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Nunito:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+    
+    <style>
+        /* Custom Scrollbar */
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    </style>
+
+    <link rel="stylesheet" href="public/site.css">
+    <link rel="icon" type="image/x-icon" href="public/logo.png" />
+</head>
+<body class="antialiased">
+    <div id="root"></div>
+
+    <!-- Application Components -->
+    <script src="src/context/RegistrationContext.js" type="text/babel"></script>
+    <script src="src/components/CommonUI.js" type="text/babel"></script>
+    <script src="src/components/Navigation.js" type="text/babel"></script>
+    <script src="src/components/Footer.js" type="text/babel"></script>
+    <script src="src/components/Contact.js" type="text/babel"></script>
+    <script src="src/components/ScienceHeroBackground.js" type="text/babel"></script>
+    <script src="src/components/Hero.js" type="text/babel"></script>
+    <script src="src/components/Mission.js" type="text/babel"></script>
+    <script src="src/components/CompetitionSection.js" type="text/babel"></script>
+    <script src="src/components/InnovatorJourney.js" type="text/babel"></script>
+    <script src="src/components/TrendingNews.js" type="text/babel"></script>
+    <script src="src/components/ScienceSimplified.js" type="text/babel"></script>
+    
+    <!-- Pages -->
+    <script src="src/pages/IndexPage.js" type="text/babel"></script>
+    <script src="src/pages/AboutPage.js" type="text/babel"></script>
+    <script src="src/pages/WorkshopPage.js" type="text/babel"></script>
+    <script src="src/pages/MakersSpacePage.js" type="text/babel"></script>
+    <script src="src/pages/ArisePage.js" type="text/babel"></script>
+    <script src="src/pages/IgnitePage.js" type="text/babel"></script>
+    <script src="src/pages/GuidelinesPage.js" type="text/babel"></script>
+    <script src="src/pages/CompetitionsPage.js" type="text/babel"></script>
+    <script src="src/pages/CompetitionCategoriesPage.js" type="text/babel"></script>
+    <script src="src/pages/CompetitionRulesPage.js" type="text/babel"></script>
+    <script src="src/pages/CompetitionFAQPage.js" type="text/babel"></script>
+    <script src="src/pages/FindFairPage.js" type="text/babel"></script>
+    <script src="src/pages/CompetitionDatabasePage.js" type="text/babel"></script>
+    <script src="src/pages/AwardsPage.js" type="text/babel"></script>
+    <script src="src/pages/GeneralFAQPage.js" type="text/babel"></script>
+    <script src="src/pages/ContactPage.js" type="text/babel"></script>
+    <script src="src/pages/NotFoundPage.js" type="text/babel"></script>
+    <script src="src/pages/ComingSoonPage.js" type="text/babel"></script>
+    
+    <!-- Main App -->
+    <script src="src/App.js" type="text/babel"></script>
+    
+    <script>
+        // Babel loads the external JSX files asynchronously. Wait for App instead
+        // of displaying a false failure while those files are still compiling.
+        (function renderWhenReady(attemptsLeft) {
+            if (window.App && window.ReactDOM) {
+                try {
+                    ReactDOM.createRoot(document.getElementById('root')).render(React.createElement(window.App));
+                } catch (error) {
+                    console.error('Render error:', error);
+                    document.getElementById('root').textContent = 'Unable to load the application. Please refresh the page.';
+                }
+                return;
+            }
+            if (attemptsLeft > 0) {
+                window.setTimeout(function () { renderWhenReady(attemptsLeft - 1); }, 50);
+                return;
+            }
+            document.getElementById('root').textContent = 'Unable to load the application. Please refresh the page.';
+        })(100);
+    </script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon='{"version":"2024.11.0","token":"340ccaf273e64b798ac47ec14dcd1067","r":1,"spa":2}' crossorigin="anonymous"></script>
+</body>
+
+
+</html>

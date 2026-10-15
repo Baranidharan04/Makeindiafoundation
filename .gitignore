@@ -1,0 +1,10 @@
+# Local Cloudflare Worker credentials
+.dev.vars
+.env
+.env.*
+!.env.example
+.wrangler/
+
+# Google service-account key files
+service-account-key.json
+*-service-account*.json

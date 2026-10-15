@@ -1,0 +1,12 @@
+name = "still-cloud-542a"
+main = "worker/index.js"
+compatibility_date = "2025-04-01"
+workers_dev = false
+
+[assets]
+directory = ".cloudflare-assets"
+binding = "ASSETS"
+
+# Form delivery is disabled until email and Google Sheets are configured.
+[vars]
+FORMS_ENABLED = "false"
