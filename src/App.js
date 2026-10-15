@@ -27,6 +27,7 @@ const App = () => {
     if (path === "/competitions/awards") return <AwardsPage />;
     if (path === "/faq") return <GeneralFAQPage />;
     if (path === "/contact") return <ContactPage />;
+    if (path === "/volunteer-registration") return <VolunteerRegistrationPage />;
     if (path === "/coming-soon") return <ComingSoonPage />;
     return <NotFoundPage />;
   };

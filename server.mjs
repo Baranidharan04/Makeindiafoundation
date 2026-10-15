@@ -56,6 +56,7 @@ async function sendEmail({ subject, text, html }) {
 // ---------------------------------------------------------------------------
 const SHEET_ID = process.env.SHEET_ID;          // e.g. the long id in the sheet URL
 const SHEET_RANGE = process.env.SHEET_RANGE || 'Sheet1!A:H';
+const VOLUNTEER_SHEET_RANGE = process.env.VOLUNTEER_SHEET_RANGE || 'Volunteers!A:I';
 
 async function appendRegistration(row) {
   if (!SHEET_ID) {
@@ -70,6 +71,17 @@ async function appendRegistration(row) {
     spreadsheetId: SHEET_ID,
     range: SHEET_RANGE,
     valueInputOption: 'USER_ENTERED',
+    requestBody: { values: [row] }
+  });
+  return res.data;
+}
+
+async function appendVolunteer(row) {
+  if (!SHEET_ID) throw new Error('SHEET_ID environment variable is not configured.');
+  const auth = new google.auth.GoogleAuth({ scopes: ['https://www.googleapis.com/auth/spreadsheets'] });
+  const sheets = google.sheets({ version: 'v4', auth });
+  const res = await sheets.spreadsheets.values.append({
+    spreadsheetId: SHEET_ID, range: VOLUNTEER_SHEET_RANGE, valueInputOption: 'USER_ENTERED',
     requestBody: { values: [row] }
   });
   return res.data;
@@ -165,6 +177,19 @@ async function handleContact(request, response) {
   return sendJson(response, 200, { ok: true });
 }
 
+async function handleVolunteerRegister(request, response) {
+  const data = await readJsonBody(request);
+  const { fullName, email, mobile, city, organisation, areasOfInterest, availability, message } = data;
+  if (!fullName || !email || !mobile || !city || !areasOfInterest || !availability || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    return sendJson(response, 400, { ok: false, error: 'Please provide a valid name, email, mobile number, city, areas of interest, and availability.' });
+  }
+  await appendVolunteer([
+    new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }), fullName, email, mobile, city,
+    organisation || '', areasOfInterest, availability, message || ''
+  ]);
+  return sendJson(response, 200, { ok: true });
+}
+
 async function handleSubscribe(request, response) {
   const data = await readJsonBody(request);
   const { email } = data;
@@ -226,6 +251,16 @@ createServer(async (request, response) => {
     } catch (err) {
       console.error('[/api/contact]', err);
       sendJson(response, 500, { ok: false, error: 'Failed to send message.' });
+    }
+    return;
+  }
+
+  if (request.method === 'POST' && pathname === '/api/volunteer-register') {
+    try {
+      await handleVolunteerRegister(request, response);
+    } catch (err) {
+      console.error('[/api/volunteer-register]', err);
+      sendJson(response, 500, { ok: false, error: 'Failed to save volunteer registration.' });
     }
     return;
   }

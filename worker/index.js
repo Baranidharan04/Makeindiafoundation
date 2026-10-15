@@ -55,9 +55,8 @@ async function googleToken(env) {
   if (!result.ok) throw new Error(`Google OAuth returned ${result.status}.`);
   return (await result.json()).access_token;
 }
-async function append(env, values) {
+async function append(env, values, range = env.SHEET_RANGE || 'Sheet1!A:I') {
   if (!env.SHEET_ID) throw new Error('Google Sheet is not configured.');
-  const range = env.SHEET_RANGE || 'Sheet1!A:I';
   const result = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${encodeURIComponent(env.SHEET_ID)}/values/${encodeURIComponent(range)}:append?valueInputOption=USER_ENTERED`, { method: 'POST', headers: { Authorization: `Bearer ${await googleToken(env)}`, 'Content-Type': 'application/json' }, body: JSON.stringify({ values: [values] }) });
   if (!result.ok) throw new Error(`Google Sheets returned ${result.status}.`);
 }
@@ -65,6 +64,18 @@ async function register(request, env) {
   const data = await body(request), name = field(data.fullName, 160), email = field(data.email, 254).toLowerCase();
   if (!name || !EMAIL.test(email)) return reply(request, env, 400, { ok: false, error: 'A valid full name and email are required.' });
   await append(env, [time(), name, field(data.grade, 32), field(data.track, 64), field(data.stream, 64), field(data.school, 200), email, field(data.mobile, 32), field(data.projectIdea)]);
+  return reply(request, env, 200, { ok: true });
+}
+async function volunteerRegister(request, env) {
+  const data = await body(request);
+  const name = field(data.fullName, 160), email = field(data.email, 254).toLowerCase();
+  const mobile = field(data.mobile, 32), city = field(data.city, 160);
+  const organisation = field(data.organisation, 200), interests = field(data.areasOfInterest, 500);
+  const availability = field(data.availability, 160), message = field(data.message, 2_000);
+  if (!name || !EMAIL.test(email) || !mobile || !city || !interests || !availability) {
+    return reply(request, env, 400, { ok: false, error: 'Please provide a valid name, email, mobile number, city, areas of interest, and availability.' });
+  }
+  await append(env, [time(), name, email, mobile, city, organisation, interests, availability, message], env.VOLUNTEER_SHEET_RANGE || 'Volunteers!A:I');
   return reply(request, env, 200, { ok: true });
 }
 async function contact(request, env) {
@@ -81,7 +92,7 @@ async function subscribe(request, env) {
   await mail(env, { subject: `Newsletter subscription: ${email}`, text: `New newsletter subscription\n\nEmail: ${email}\nSubscribed: ${subscribed}`, content: `<h2>New newsletter subscription</h2><p><strong>Email:</strong> ${html(email)}</p><p><strong>Subscribed:</strong> ${html(subscribed)}</p>` });
   return reply(request, env, 200, { ok: true });
 }
-const routes = { '/api/register': register, '/api/contact': contact, '/api/subscribe': subscribe };
+const routes = { '/api/register': register, '/api/contact': contact, '/api/subscribe': subscribe, '/api/volunteer-register': volunteerRegister };
 export default { async fetch(request, env) {
   const path = new URL(request.url).pathname;
   if (request.method === 'OPTIONS' && routes[path]) return new Response(null, { status: 204, headers: cors(request, env) });
