@@ -2,6 +2,16 @@
 var workshopHero = 'src/assets/hero/hero_2.png';
 var fewoImg = 'src/assets/keerthan-dm-XA92214FLiM-unsplash.jpg';
 var hero2 = 'src/assets/hero/hero2.png';
+var stemPilotPhotos = [
+  { src: 'src/assets/workshops/stem-pilot-electronics.jpg', alt: 'Students building electronics together' },
+  { src: 'src/assets/workshops/stem-pilot-mentor-session.jpg', alt: 'Mentor guiding students during a STEM session' },
+  { src: 'src/assets/workshops/stem-pilot-components.jpg', alt: 'Components arranged for a collaborative workshop build' },
+  { src: 'src/assets/workshops/stem-pilot-3d-printer.jpg', alt: 'Student working with a 3D printer' },
+  { src: 'src/assets/workshops/stem-pilot-components-sorting.jpg', alt: 'Students sorting workshop components' },
+  { src: 'src/assets/workshops/stem-pilot-collaboration.jpg', alt: 'Students collaborating on a project' }
+];
+var stemPilotInstagramUrl = 'https://www.instagram.com/p/DdikQcmkyfq/?cplk=a3dkbjE3dzdsY2Qw&img_index=1';
+var stemPilotAlbumUrl = 'https://drive.google.com/drive/folders/1wMMWlywJqkaZqNRmC26A8j9telb89cQQ?usp=sharing';
 
 const WorkshopPage = () => {
   const openComingSoon = () => {
@@ -113,7 +123,6 @@ const WorkshopPage = () => {
           </div>
         </div>
       </section>
-
       <section className="py-16 bg-[#eadccb]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
           <div className="text-center mb-8">
@@ -170,6 +179,26 @@ const WorkshopPage = () => {
           </div>
         </div>
       </section>
+       <section className="bg-white py-16" aria-labelledby="recent-workshops-title">
+         <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+           <div className="mb-10 max-w-2xl">
+             <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-[#168b84]">Recent workshops</p>
+             <h2 id="recent-workshops-title" className="mb-4 text-3xl font-extrabold sm:text-4xl">Learning by making</h2>
+             <p className="text-sm leading-relaxed text-[#6f6056] sm:text-base">A look back at PILOT-1, where students explored STEM through practical, hands-on learning.</p>
+           </div>
+            <div className="grid gap-8 lg:grid-cols-[1.35fr_0.9fr] lg:items-start">
+              <div className="grid grid-cols-2 gap-3 sm:gap-4">
+                {stemPilotPhotos.map((photo) => <div key={photo.src} className="aspect-[4/3] overflow-hidden rounded-lg border border-[#b7a390] bg-[#e1cdb8] shadow-sm"><img src={photo.src} alt={photo.alt} className="h-full w-full object-cover transition-transform duration-500 hover:scale-105" /></div>)}
+             </div>
+             <aside className="rounded-lg border border-[#7d6a5b] bg-[#eadccb] p-6 shadow-[0_10px_28px_rgba(0,0,0,0.12)] sm:p-8">
+               <h3 className="mb-3 text-2xl font-extrabold">PILOT-1</h3>
+               <p className="mb-6 text-sm leading-relaxed text-[#6f6056]">A one-day workshop bringing students, mentors and volunteers together at Thamarai Learning Centre, Auroville.</p>
+               <dl className="space-y-5 text-sm"><div><dt className="font-bold text-[#168b84]">Date</dt><dd className="mt-1">13 September 2026</dd></div><div><dt className="font-bold text-[#168b84]">Time</dt><dd className="mt-1">9:30 AM - 4:30 PM</dd></div><div><dt className="font-bold text-[#168b84]">Location</dt><dd className="mt-1">Thamarai Learning Centre, Auroville</dd></div><div><dt className="font-bold text-[#168b84]">Participants</dt><dd className="mt-1">42 participants (30 students and 12 volunteers)</dd></div></dl>
+               <div className="mt-8 flex flex-col items-start gap-4 border-t border-[#b7a390] pt-6 text-sm font-bold sm:flex-row sm:flex-wrap sm:items-center"><a href={stemPilotInstagramUrl} target="_blank" rel="noreferrer" className="rounded-md text-[#0f756f] underline decoration-transparent underline-offset-4 transition hover:decoration-current focus:outline-none focus:ring-2 focus:ring-[#168b84] focus:ring-offset-2">View Instagram post <span aria-hidden="true">↗</span></a><a href={stemPilotAlbumUrl} target="_blank" rel="noreferrer" className="rounded-md text-[#0f756f] underline decoration-transparent underline-offset-4 transition hover:decoration-current focus:outline-none focus:ring-2 focus:ring-[#168b84] focus:ring-offset-2">Open photo album <span aria-hidden="true">↗</span></a></div>
+             </aside>
+           </div>
+         </div>
+       </section>
       <Footer />
     </div>
   );

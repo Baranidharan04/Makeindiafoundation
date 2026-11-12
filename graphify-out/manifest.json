@@ -6,10 +6,10 @@
     "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
   },
   "package.json": {
-    "mtime": 1794462837.1416543,
-    "seen": 1794463356.717547,
-    "ast_hash": "1a24ac96a6a2af761885b4834f5a5ea8",
-    "semantic_hash": "1a24ac96a6a2af761885b4834f5a5ea8"
+    "mtime": 1794464055.4822774,
+    "seen": 1794464259.839164,
+    "ast_hash": "f0f84a0baed199931ec52c7983fce7d0",
+    "semantic_hash": ""
   },
   "server.mjs": {
     "mtime": 1794462837.1481686,
@@ -226,5 +226,263 @@
     "seen": 1794463356.71758,
     "ast_hash": "9cb4adef178856a1754aed6bc610148e",
     "semantic_hash": "9cb4adef178856a1754aed6bc610148e"
+  },
+  "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/test.py": {
+    "mtime": 1794462835.9889655,
+    "seen": 1794464259.8391612,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": ""
+  },
+  "scripts/build-assets.mjs": {
+    "mtime": 1794464055.4909046,
+    "seen": 1794464259.839168,
+    "ast_hash": "87a1dc2617743dd4a9af5ab2bc487adc",
+    "semantic_hash": ""
+  },
+  "tests/build-assets.test.mjs": {
+    "mtime": 1794464055.4913337,
+    "seen": 1794464259.839199,
+    "ast_hash": "60bcd3638df69e88e2561123f9a0f5f1",
+    "semantic_hash": ""
+  },
+  "$&/index.html": {
+    "mtime": 1794462835.9403272,
+    "seen": 1794464259.839201,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": ""
+  },
+  "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/index.html": {
+    "mtime": 1794462835.9889152,
+    "seen": 1794464259.8392022,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": ""
+  },
+  "UPDATE.md": {
+    "mtime": 1794464055.4921095,
+    "seen": 1794464259.8392031,
+    "ast_hash": "45b3c129445d59cf36cbfd33356a8a72",
+    "semantic_hash": ""
+  },
+  "a.source,this.map.consumer(.html": {
+    "mtime": 1794462835.9890876,
+    "seen": 1794464259.839204,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": ""
+  },
+  "competitions/index.html": {
+    "mtime": 1794462835.9892292,
+    "seen": 1794464259.839205,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": ""
+  },
+  "index.html": {
+    "mtime": 1794462835.989404,
+    "seen": 1794464259.839205,
+    "ast_hash": "c7b74aa4217f82e8116d8e28e020faf8",
+    "semantic_hash": ""
+  },
+  "tailwind.config.mjs.html": {
+    "mtime": 1794462837.1957278,
+    "seen": 1794464259.839206,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": ""
+  },
+  "template.html": {
+    "mtime": 1794462837.1958234,
+    "seen": 1794464259.839207,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": ""
+  },
+  "public/logo.png": {
+    "mtime": 1794462837.147873,
+    "seen": 1794464259.8392289,
+    "ast_hash": "dcbb7c75cb748ea83d9112cdd3e933d7",
+    "semantic_hash": ""
+  },
+  "src/assets/AIC.jpeg": {
+    "mtime": 1794462837.1485167,
+    "seen": 1794464259.83923,
+    "ast_hash": "d257cde731cd92eb3f4e4ee71e125c8c",
+    "semantic_hash": ""
+  },
+  "src/assets/DR sunadaramoorthy.PNG": {
+    "mtime": 1794462837.1487575,
+    "seen": 1794464259.83923,
+    "ast_hash": "69fe30606c1e0ae29f6da6dc48dbcff7",
+    "semantic_hash": ""
+  },
+  "src/assets/Kumarram.jpeg": {
+    "mtime": 1794462837.1489258,
+    "seen": 1794464259.839231,
+    "ast_hash": "54e994609fab83b8fc6fccf3cc133b2a",
+    "semantic_hash": ""
+  },
+  "src/assets/Vishnu.PNG": {
+    "mtime": 1794462837.1492443,
+    "seen": 1794464259.839232,
+    "ast_hash": "ed7bcfb4e1e691850605bfd27cc50a41",
+    "semantic_hash": ""
+  },
+  "src/assets/adplix-logo.png": {
+    "mtime": 1794462837.149889,
+    "seen": 1794464259.839232,
+    "ast_hash": "96d6d8fc1622a565faf7ef75fa59329e",
+    "semantic_hash": ""
+  },
+  "src/assets/awesome_cool_science_experiments_for_kids.webp": {
+    "mtime": 1794462837.1500113,
+    "seen": 1794464259.839233,
+    "ast_hash": "b8634bfd1c444e4cae89ccb1eab95027",
+    "semantic_hash": ""
+  },
+  "src/assets/bytes.jpeg": {
+    "mtime": 1794462837.150132,
+    "seen": 1794464259.839234,
+    "ast_hash": "b5faff60c6b719b7319852dd4803f12e",
+    "semantic_hash": ""
+  },
+  "src/assets/competitions/building.jpg": {
+    "mtime": 1794462837.150408,
+    "seen": 1794464259.839234,
+    "ast_hash": "343c0d9da7f363884ab96f94be039961",
+    "semantic_hash": ""
+  },
+  "src/assets/competitions/c1.png": {
+    "mtime": 1794462837.1567097,
+    "seen": 1794464259.839235,
+    "ast_hash": "7aee3abfd1b8a69beb7f9631c85d1983",
+    "semantic_hash": ""
+  },
+  "src/assets/competitions/c2.png": {
+    "mtime": 1794462837.1626656,
+    "seen": 1794464259.839236,
+    "ast_hash": "34e550606f115ab58285ab9f90ece64d",
+    "semantic_hash": ""
+  },
+  "src/assets/competitions/drone.jpg": {
+    "mtime": 1794462837.162895,
+    "seen": 1794464259.839236,
+    "ast_hash": "ad90313355edcc8c96424c293d1eb48a",
+    "semantic_hash": ""
+  },
+  "src/assets/engineering.jpg": {
+    "mtime": 1794462837.1630924,
+    "seen": 1794464259.8392372,
+    "ast_hash": "d80bd1ef98e264ce6ab38e2e6f459d97",
+    "semantic_hash": ""
+  },
+  "src/assets/hero/hero1.png": {
+    "mtime": 1794462837.1641495,
+    "seen": 1794464259.839238,
+    "ast_hash": "86c600048a9503f456136c9cb2819334",
+    "semantic_hash": ""
+  },
+  "src/assets/hero/hero2.png": {
+    "mtime": 1794462837.1652105,
+    "seen": 1794464259.839238,
+    "ast_hash": "dd4f252f13585cd454a9d6a7171c6f8e",
+    "semantic_hash": ""
+  },
+  "src/assets/hero/hero3.png": {
+    "mtime": 1794462837.1697757,
+    "seen": 1794464259.839239,
+    "ast_hash": "10c966d89d8e7ac653505b108db2222f",
+    "semantic_hash": ""
+  },
+  "src/assets/hero/hero_2.png": {
+    "mtime": 1794462837.1702313,
+    "seen": 1794464259.8392398,
+    "ast_hash": "968ea99c254af127e2bcc83a8d5587a8",
+    "semantic_hash": ""
+  },
+  "src/assets/hero/makerhero.png": {
+    "mtime": 1794462837.1714747,
+    "seen": 1794464259.8392398,
+    "ast_hash": "2b8478ad49b7f537ae612fad44fa10cd",
+    "semantic_hash": ""
+  },
+  "src/assets/keerthan-dm-XA92214FLiM-unsplash.jpg": {
+    "mtime": 1794462837.1733994,
+    "seen": 1794464259.839241,
+    "ast_hash": "eff1ceea60eb9fabd1461547a231108d",
+    "semantic_hash": ""
+  },
+  "src/assets/murugan.PNG": {
+    "mtime": 1794462837.1801882,
+    "seen": 1794464259.839242,
+    "ast_hash": "560c4f1e1525b3836fc1ca31a841cf97",
+    "semantic_hash": ""
+  },
+  "src/assets/news/hindu.png": {
+    "mtime": 1794462837.180449,
+    "seen": 1794464259.839242,
+    "ast_hash": "28e2811ab980c1aa8685362a374d5bda",
+    "semantic_hash": ""
+  },
+  "src/assets/news/ndtv.jpeg": {
+    "mtime": 1794462837.1806595,
+    "seen": 1794464259.839243,
+    "ast_hash": "cc00b082a1900458a50ee41c16c924be",
+    "semantic_hash": ""
+  },
+  "src/assets/shelley-seagraves.jpg": {
+    "mtime": 1794462837.181044,
+    "seen": 1794464259.8392441,
+    "ast_hash": "b1629c774f9c3f4c21bf36bac6ad6f0f",
+    "semantic_hash": ""
+  },
+  "src/assets/team-photo.jpg": {
+    "mtime": 1794462837.1812656,
+    "seen": 1794464259.8392441,
+    "ast_hash": "43281153365440016f07c9d1aa04e2b9",
+    "semantic_hash": ""
+  },
+  "src/assets/technology.jpg": {
+    "mtime": 1794462837.1815984,
+    "seen": 1794464259.839245,
+    "ast_hash": "26946f32221e6544ead6dbd7f0fe630e",
+    "semantic_hash": ""
+  },
+  "src/assets/workshops/stem-pilot-3d-printer.jpg": {
+    "mtime": 1794462837.1850665,
+    "seen": 1794464259.839246,
+    "ast_hash": "6a19da99ea7a3e97a6a80aee0f2c7f74",
+    "semantic_hash": ""
+  },
+  "src/assets/workshops/stem-pilot-collaboration.jpg": {
+    "mtime": 1794462837.185345,
+    "seen": 1794464259.839246,
+    "ast_hash": "2b64448e1d77b946498dadafabada5bc",
+    "semantic_hash": ""
+  },
+  "src/assets/workshops/stem-pilot-components-sorting.jpg": {
+    "mtime": 1794462837.1856172,
+    "seen": 1794464259.839247,
+    "ast_hash": "8fb2c276371c478421941c40677cc3ff",
+    "semantic_hash": ""
+  },
+  "src/assets/workshops/stem-pilot-components.jpg": {
+    "mtime": 1794462837.1859224,
+    "seen": 1794464259.839248,
+    "ast_hash": "e51d41ee59768513533683d8f5005abe",
+    "semantic_hash": ""
+  },
+  "src/assets/workshops/stem-pilot-electronics.jpg": {
+    "mtime": 1794462837.1865664,
+    "seen": 1794464259.839248,
+    "ast_hash": "e8a06dafc168f0f9c6cec6177527b583",
+    "semantic_hash": ""
+  },
+  "src/assets/workshops/stem-pilot-mentor-session.jpg": {
+    "mtime": 1794462837.191174,
+    "seen": 1794464259.839249,
+    "ast_hash": "7f3b0e8e98fee03c3fa79ed18359d3e0",
+    "semantic_hash": ""
+  },
+  "package-lock.json": {
+    "mtime": 1794463442.8451583,
+    "seen": 1794464259.8392498,
+    "ast_hash": "4133e14ef0795151c48412ba2f713a99",
+    "semantic_hash": ""
   }
 }

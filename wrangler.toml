@@ -1,7 +1,11 @@
 name = "still-cloud-542a"
+account_id = "52bc94af9df5f9a09ccd0db911c4424f"
 main = "worker/index.js"
 compatibility_date = "2025-04-01"
 workers_dev = false
+
+[build]
+command = "npm run build"
 
 [assets]
 directory = ".cloudflare-assets"

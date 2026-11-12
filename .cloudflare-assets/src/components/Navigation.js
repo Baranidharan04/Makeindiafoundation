@@ -27,6 +27,7 @@ const NAV_ITEMS = [
   { id: "about", label: "About Us", icon: Users, href: "/about" },
   { id: "faq", label: "FAQ", icon: HelpCircle, href: "/faq" },
   { id: "contact", label: "Get in Touch", icon: Mail, href: "/contact" },
+  { id: "volunteer-registration", label: "Volunteer Registration", icon: Heart, href: "/volunteer-registration" },
 ];
 
 const NavButton = ({

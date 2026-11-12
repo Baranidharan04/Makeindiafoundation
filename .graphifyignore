@@ -1,0 +1,5 @@
+# Keep project context on first-party source, not upload copies or vendor bundles.
+node_modules/
+.cloudflare-assets/
+public/js/
+.opencode/

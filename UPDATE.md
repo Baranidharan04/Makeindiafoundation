@@ -32,11 +32,30 @@ The `EMAIL` binding in `wrangler.toml` is intentionally restricted to `makeindia
 
 Share the Google Sheet with the service-account email as an **Editor**. The expected columns are Timestamp, Name, Grade, Track, Stream, School, Email, Mobile, Project Idea.
 
-## Deploy
+## Deploy the website
 
-1. Configure the variables/secrets above in **Workers & Pages → make-india-foundation-api → Settings → Variables and Secrets**.
-2. Run `npm run deploy:worker`.
-3. In **Settings → Triggers**, add `makeindiafoundation.org/api/*` (and the `www` route if used).
-4. Submit each form once. Contact and subscription messages should reach `makeindialab@gmail.com`; registrations should appear in the Sheet.
+The production Worker is **still-cloud-542a**, in account
+`52bc94af9df5f9a09ccd0db911c4424f`. It serves the website and its existing form
+routes. Form delivery remains disabled (`FORMS_ENABLED = "false"`) until the
+email and Google Sheets setup above is complete.
+
+1. Run `npm ci`, then `npm run build` and `npm test`.
+2. Push the changes to `main`. The existing Cloudflare Workers Builds integration
+   deploys that branch to production.
+3. Alternatively, check `npx wrangler whoami` for access to the production
+   account, then run `npm run deploy:worker`. The account is pinned in
+   `wrangler.toml` to prevent deployment to an unrelated account.
+4. Check `https://makeindiafoundation.org/#/stem-workshops` after deployment.
+
+Wrangler's custom build runs `npm run build` before every deployment. This
+rebuilds Tailwind CSS and replaces `.cloudflare-assets` with the current
+`index.html`, `src/`, and `public/` frontend files, including the workshop photos
+and volunteer page. Do not copy the whole repository into the upload directory.
+Private files, dependencies, hidden files, and symlinks are excluded.
+
+To enable form delivery later, configure the variables/secrets on
+**Workers & Pages → still-cloud-542a → Settings → Variables and Secrets**,
+configure the required email binding, and explicitly enable `FORMS_ENABLED`.
+Website deployments do not require changes to the existing domain routes.
 
 Secrets must never be stored in frontend code, Git, `.dev.vars`, or `wrangler.toml`.
