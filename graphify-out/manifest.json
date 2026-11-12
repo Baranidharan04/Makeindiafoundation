@@ -1,0 +1,230 @@
+{
+  "file.ts": {
+    "mtime": 1794462835.989275,
+    "seen": 1794463356.717543,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "package.json": {
+    "mtime": 1794462837.1416543,
+    "seen": 1794463356.717547,
+    "ast_hash": "1a24ac96a6a2af761885b4834f5a5ea8",
+    "semantic_hash": "1a24ac96a6a2af761885b4834f5a5ea8"
+  },
+  "server.mjs": {
+    "mtime": 1794462837.1481686,
+    "seen": 1794463356.717549,
+    "ast_hash": "457aa58587462245ca211c06ec1c7153",
+    "semantic_hash": "457aa58587462245ca211c06ec1c7153"
+  },
+  "src/App.js": {
+    "mtime": 1794462837.1483905,
+    "seen": 1794463356.71755,
+    "ast_hash": "ce101065e5ac78b972fec6b5c8804d92",
+    "semantic_hash": "ce101065e5ac78b972fec6b5c8804d92"
+  },
+  "src/components/CommonUI.js": {
+    "mtime": 1794462837.1913552,
+    "seen": 1794463356.717551,
+    "ast_hash": "a8f1465538cf038ff17e915c84c74059",
+    "semantic_hash": "a8f1465538cf038ff17e915c84c74059"
+  },
+  "src/components/CompetitionSection.js": {
+    "mtime": 1794462837.1914372,
+    "seen": 1794463356.717551,
+    "ast_hash": "62d4efd4079561165ac2320d3dbce4eb",
+    "semantic_hash": "62d4efd4079561165ac2320d3dbce4eb"
+  },
+  "src/components/Contact.js": {
+    "mtime": 1794462837.1915255,
+    "seen": 1794463356.7175522,
+    "ast_hash": "6000d536e22455ca2a725bcc3ac53aa2",
+    "semantic_hash": "6000d536e22455ca2a725bcc3ac53aa2"
+  },
+  "src/components/Footer.js": {
+    "mtime": 1794462837.1927934,
+    "seen": 1794463356.717553,
+    "ast_hash": "eb0926e8688375e6be2dfa5ec50553ac",
+    "semantic_hash": "eb0926e8688375e6be2dfa5ec50553ac"
+  },
+  "src/components/Hero.js": {
+    "mtime": 1794462837.1929405,
+    "seen": 1794463356.7175539,
+    "ast_hash": "fd6cc0ea6217c5cc8d9b06ba916e2d57",
+    "semantic_hash": "fd6cc0ea6217c5cc8d9b06ba916e2d57"
+  },
+  "src/components/InnovatorJourney.js": {
+    "mtime": 1794462837.1930883,
+    "seen": 1794463356.7175539,
+    "ast_hash": "a861720a3a4f71122d97beea1bbf7ae7",
+    "semantic_hash": "a861720a3a4f71122d97beea1bbf7ae7"
+  },
+  "src/components/Mission.js": {
+    "mtime": 1794462837.1932209,
+    "seen": 1794463356.717555,
+    "ast_hash": "6500cac0dec0117865ce1580c16b3ce4",
+    "semantic_hash": "6500cac0dec0117865ce1580c16b3ce4"
+  },
+  "src/components/Navigation.js": {
+    "mtime": 1794462837.193315,
+    "seen": 1794463356.717556,
+    "ast_hash": "4412f4a75d0b14710d77fd47b333444d",
+    "semantic_hash": "4412f4a75d0b14710d77fd47b333444d"
+  },
+  "src/components/ScienceHeroBackground.js": {
+    "mtime": 1794462837.1933956,
+    "seen": 1794463356.717556,
+    "ast_hash": "fb7dcfc14f024959ca6bf347613e2f97",
+    "semantic_hash": "fb7dcfc14f024959ca6bf347613e2f97"
+  },
+  "src/components/ScienceSimplified.js": {
+    "mtime": 1794462837.1934776,
+    "seen": 1794463356.717557,
+    "ast_hash": "1f3a7ce300bea246e5739cbb2383aef3",
+    "semantic_hash": "1f3a7ce300bea246e5739cbb2383aef3"
+  },
+  "src/components/TrendingNews.js": {
+    "mtime": 1794462837.1936023,
+    "seen": 1794463356.717558,
+    "ast_hash": "85e32cd0085bc08d3572ca7d69f10a87",
+    "semantic_hash": "85e32cd0085bc08d3572ca7d69f10a87"
+  },
+  "src/context/RegistrationContext.js": {
+    "mtime": 1794462837.1937168,
+    "seen": 1794463356.717559,
+    "ast_hash": "b9f4cff0359cb1c14540e9d47e223f00",
+    "semantic_hash": "b9f4cff0359cb1c14540e9d47e223f00"
+  },
+  "src/pages/AboutPage.js": {
+    "mtime": 1794462837.1938946,
+    "seen": 1794463356.717559,
+    "ast_hash": "191414f53c58f5b46315327562abda80",
+    "semantic_hash": "191414f53c58f5b46315327562abda80"
+  },
+  "src/pages/ArisePage.js": {
+    "mtime": 1794462837.1940098,
+    "seen": 1794463356.71756,
+    "ast_hash": "3a282b8c1f4fecddad3513f9c5e3b956",
+    "semantic_hash": "3a282b8c1f4fecddad3513f9c5e3b956"
+  },
+  "src/pages/AwardsPage.js": {
+    "mtime": 1794462837.1941376,
+    "seen": 1794463356.71756,
+    "ast_hash": "965382231c3b44f7cee8bf617693ce1f",
+    "semantic_hash": "965382231c3b44f7cee8bf617693ce1f"
+  },
+  "src/pages/ComingSoonPage.js": {
+    "mtime": 1794462837.1942112,
+    "seen": 1794463356.717561,
+    "ast_hash": "328e0f632a09bf63655d76b3383e9e14",
+    "semantic_hash": "328e0f632a09bf63655d76b3383e9e14"
+  },
+  "src/pages/CompetitionCategoriesPage.js": {
+    "mtime": 1794462837.1943078,
+    "seen": 1794463356.7175622,
+    "ast_hash": "62dc45ca5872e3706f98f3caadbde279",
+    "semantic_hash": "62dc45ca5872e3706f98f3caadbde279"
+  },
+  "src/pages/CompetitionDatabasePage.js": {
+    "mtime": 1794462837.1944046,
+    "seen": 1794463356.7175622,
+    "ast_hash": "c3b97f8a48830e1397e0483358f356d3",
+    "semantic_hash": "c3b97f8a48830e1397e0483358f356d3"
+  },
+  "src/pages/CompetitionFAQPage.js": {
+    "mtime": 1794462837.194537,
+    "seen": 1794463356.717569,
+    "ast_hash": "3b25b668eb9dc6e0096c0aa47c8e3072",
+    "semantic_hash": "3b25b668eb9dc6e0096c0aa47c8e3072"
+  },
+  "src/pages/CompetitionRulesPage.js": {
+    "mtime": 1794462837.194619,
+    "seen": 1794463356.71757,
+    "ast_hash": "b0a2427737533e7e246b3e37ae547b12",
+    "semantic_hash": "b0a2427737533e7e246b3e37ae547b12"
+  },
+  "src/pages/CompetitionsPage.js": {
+    "mtime": 1794462837.1947021,
+    "seen": 1794463356.717571,
+    "ast_hash": "c537543fa6490f43361bfa15ad311f23",
+    "semantic_hash": "c537543fa6490f43361bfa15ad311f23"
+  },
+  "src/pages/ContactPage.js": {
+    "mtime": 1794462837.194773,
+    "seen": 1794463356.7175722,
+    "ast_hash": "2f2f1b146a8e866dc6c5c7e76780461b",
+    "semantic_hash": "2f2f1b146a8e866dc6c5c7e76780461b"
+  },
+  "src/pages/FindFairPage.js": {
+    "mtime": 1794462837.1948571,
+    "seen": 1794463356.7175722,
+    "ast_hash": "2aa3f5a8ad7a1d94cb2735d751ef2d21",
+    "semantic_hash": "2aa3f5a8ad7a1d94cb2735d751ef2d21"
+  },
+  "src/pages/GeneralFAQPage.js": {
+    "mtime": 1794462837.1949308,
+    "seen": 1794463356.7175732,
+    "ast_hash": "0f159362c01214c9d854cac337331962",
+    "semantic_hash": "0f159362c01214c9d854cac337331962"
+  },
+  "src/pages/GuidelinesPage.js": {
+    "mtime": 1794462837.195029,
+    "seen": 1794463356.717574,
+    "ast_hash": "8fae9762e954ae89b80a9e1ca280f7a5",
+    "semantic_hash": "8fae9762e954ae89b80a9e1ca280f7a5"
+  },
+  "src/pages/IgnitePage.js": {
+    "mtime": 1794462837.1951084,
+    "seen": 1794463356.717574,
+    "ast_hash": "cb6345b01667d86c421b788a1ea46f13",
+    "semantic_hash": "cb6345b01667d86c421b788a1ea46f13"
+  },
+  "src/pages/IndexPage.js": {
+    "mtime": 1794462837.195185,
+    "seen": 1794463356.7175748,
+    "ast_hash": "9f3f302abc36536a2042104a1dae5f44",
+    "semantic_hash": "9f3f302abc36536a2042104a1dae5f44"
+  },
+  "src/pages/MakersSpacePage.js": {
+    "mtime": 1794462837.1952834,
+    "seen": 1794463356.717576,
+    "ast_hash": "cf2a1aceecc798c6e16fa0dd4838cc2c",
+    "semantic_hash": "cf2a1aceecc798c6e16fa0dd4838cc2c"
+  },
+  "src/pages/NotFoundPage.js": {
+    "mtime": 1794462837.1953537,
+    "seen": 1794463356.717577,
+    "ast_hash": "37c7f05ff86448e6397a42cd487d959b",
+    "semantic_hash": "37c7f05ff86448e6397a42cd487d959b"
+  },
+  "src/pages/VolunteerRegistrationPage.js": {
+    "mtime": 1794462837.1954336,
+    "seen": 1794463356.717577,
+    "ast_hash": "88b64a2caed41109cb45f81005ff92d0",
+    "semantic_hash": "88b64a2caed41109cb45f81005ff92d0"
+  },
+  "src/pages/WorkshopPage.js": {
+    "mtime": 1794462837.1955583,
+    "seen": 1794463356.717578,
+    "ast_hash": "5a63dcb0420058a0e130c00926b369ce",
+    "semantic_hash": "5a63dcb0420058a0e130c00926b369ce"
+  },
+  "tailwind.config.cjs": {
+    "mtime": 1794462837.1956978,
+    "seen": 1794463356.7175791,
+    "ast_hash": "08bd62043ed327f43d5b9d89560e8eb3",
+    "semantic_hash": "08bd62043ed327f43d5b9d89560e8eb3"
+  },
+  "tailwind.config.ts": {
+    "mtime": 1794462837.19578,
+    "seen": 1794463356.7175791,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "worker/index.js": {
+    "mtime": 1794462837.1959581,
+    "seen": 1794463356.71758,
+    "ast_hash": "9cb4adef178856a1754aed6bc610148e",
+    "semantic_hash": "9cb4adef178856a1754aed6bc610148e"
+  }
+}
