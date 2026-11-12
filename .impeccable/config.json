@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "ai-color-palette",
+        "value": "*",
+        "files": [
+          "src/components/Mission.js"
+        ],
+        "createdAt": "2026-11-12T07:12:19.907Z",
+        "reason": "Agent: subject-specific STEM selection gradients are incumbent design in the initial commit; this image repair preserves those existing themes."
+      }
+    ]
+  }
+}

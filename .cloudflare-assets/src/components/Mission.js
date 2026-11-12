@@ -1,8 +1,8 @@
-const experimentImg = 'src/assets/awesome_cool_science_experiments_for_kids.webp';
+const experimentImg = '/src/assets/awesome_cool_science_experiments_for_kids.webp';
 var fewoImg = 'src/assets/technology.jpg';
-const technologyImg = 'src/assets/technology.jpg';
-const engineerImg = 'src/assets/engineering.jpg';
-const teamPhoto = 'src/assets/team-photo.jpg';
+const technologyImg = '/src/assets/technology.jpg';
+const engineerImg = '/src/assets/engineering.jpg';
+const teamPhoto = '/src/assets/team-photo.jpg';
 
 const Mission = () => {
   const [activeCard, setActiveCard] = React.useState(0);
@@ -55,6 +55,7 @@ const Mission = () => {
                 key={card.title}
                 onMouseEnter={() => setActiveCard(index)}
                 onFocus={() => setActiveCard(index)}
+                onClick={() => setActiveCard(index)}
                 className={`w-full text-left rounded-3xl p-6 border border-border/60 transition-all duration-300 overflow-hidden group relative ${activeCard === index ? "-translate-x-2 shadow-2xl border-primary/70" : "hover:-translate-x-1 hover:shadow-lg"
                   }`}
               >
@@ -83,7 +84,7 @@ const Mission = () => {
               <img
                 src={STEM_CARDS[activeCard].image}
                 alt={STEM_CARDS[activeCard].title}
-                className="w-full h-auto object-cover transition-all duration-500 hover:scale-105"
+                className="w-full h-full object-cover transition-all duration-500 hover:scale-105"
               />
               <div className="absolute inset-0 bg-black/40" />
               <div className="absolute inset-0 flex items-end p-6">

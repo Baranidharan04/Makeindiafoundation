@@ -60,7 +60,7 @@ const AboutPage = () => {
         <section id="stand-for" className="py-20 bg-background">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-foreground to-muted-foreground">What We Stand For</h2>
+              <h2 className="text-3xl font-bold text-foreground">What We Stand For</h2>
             </div>
             <div className="grid md:grid-cols-2 gap-8">
               <Card className="group hover:-translate-y-2 hover:shadow-xl transition-all duration-300 border-primary/20">
@@ -104,10 +104,13 @@ const AboutPage = () => {
                 <div className="bg-gradient-to-br from-primary/80 to-white-600 p-8 flex flex-col items-center justify-center text-brown text-center">
                   <div className="w-36 h-36 mb-4 rounded-full bg-white/15 border-4 border-white/20 shadow-inner flex items-center justify-center" aria-label="Kumar Ram">
                     <span className="text-4xl font-bold tracking-wide"><img
-                    src="src/assets/kumarram.jpeg"
+                    src="/src/assets/Kumarram.jpeg"
                     alt="Kumar Ram"
                     className="relative w-32 h-32 rounded-full object-cover border-4 border-white dark:border-slate-800 shadow-xl"
-                    onError={(e) => { e.currentTarget.src = "https://ui-avatars.com/api/?name=Murugan&background=fed7aa&color=c2410c&bold=true&size=150" }}
+                    onError={(e) => {
+                      const fallback = "https://ui-avatars.com/api/?name=Kumar+Ram&background=fed7aa&color=c2410c&bold=true&size=150";
+                      if (e.currentTarget.src !== fallback) e.currentTarget.src = fallback;
+                    }}
                   /></span>
                   </div>
                   <h3 className="text-2xl font-bold">Kumar Ram</h3>
