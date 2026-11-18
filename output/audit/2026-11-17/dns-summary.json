@@ -1,0 +1,35 @@
+{
+  "checkedDate": "2026-11-17",
+  "domain": "makeindiafoundation.org",
+  "A": [
+    "172.67.186.243",
+    "104.21.19.159"
+  ],
+  "AAAA": [
+    "2606:4700:3037::6815:139f",
+    "2606:4700:3036::ac43:baf3"
+  ],
+  "MX": [
+    {
+      "priority": 36,
+      "host": "route2.mx.cloudflare.net"
+    },
+    {
+      "priority": 58,
+      "host": "route1.mx.cloudflare.net"
+    },
+    {
+      "priority": 60,
+      "host": "route3.mx.cloudflare.net"
+    }
+  ],
+  "NS": [
+    "bailey.ns.cloudflare.com",
+    "eric.ns.cloudflare.com"
+  ],
+  "SPF": "v=spf1 include:_spf.mx.cloudflare.net ~all",
+  "DMARC": "v=DMARC1; p=quarantine; adkim=r; aspf=r; rua=mailto:dmarc_rua@onsecureserver.net;",
+  "wwwStatus": "NXDOMAIN verified at 1.1.1.1",
+  "CAA": [],
+  "DKIM": "not tested; selector and sending provider required"
+}

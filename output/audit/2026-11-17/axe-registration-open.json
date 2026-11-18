@@ -1,0 +1,266 @@
+{
+  "url": "https://makeindiafoundation.org/",
+  "modalOpen": true,
+  "activeElement": "<button class=\"inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 b",
+  "dialogCount": 0,
+  "violations": [
+    {
+      "id": "button-name",
+      "impact": "critical",
+      "count": 2,
+      "nodes": [
+        {
+          "html": "<button class=\"md:hidden p-2 rounded-lg transition-colors text-white hover:bg-white/10\">",
+          "target": [
+            ".hover\\:bg-white\\/10"
+          ],
+          "summary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+        },
+        {
+          "html": "<button class=\"absolute top-6 right-6 text-slate-400 hover:text-white transition-colors z-10\">",
+          "target": [
+            ".top-6"
+          ],
+          "summary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+        }
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "count": 26,
+      "nodes": [
+        {
+          "html": "<p class=\"text-muted-foreground leading-relaxed\">Science is the foundation for observation, hypothesis, and experimentation\u2014forming the basis for engineering solutions.</p>",
+          "target": [
+            ".border-border\\/50.bg-background.rounded-3xl > .p-8 > .leading-relaxed"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.32 (foreground color: #755c57, background color: #e7d6c5, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors bg-primary text-primary-foreground border-transparent bg-white px-3 py-1 text-xs uppercase font-semibold\" style=\"color: rgb(207, 108, 8);\">High school</span>",
+          "target": [
+            "a[href$=\"#/competitions/arise\"] > .shadow-\\[0_0px_10px_rgba\\(0\\,0\\,0\\,0\\.8\\)\\].hover\\:shadow-\\[0_0px_20px_rgba\\(0\\,0\\,0\\,1\\)\\].hover\\:-translate-y-1 > .h-64.group.overflow-hidden > .bottom-4.left-4.gap-3 > .px-2\\.5.py-0\\.5.border-transparent"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.61 (foreground color: #cf6c08, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors bg-primary text-primary-foreground border-transparent bg-white px-3 py-1 text-xs uppercase font-semibold\" style=\"color: rgb(207, 108, 8);\">Middle school</span>",
+          "target": [
+            "a[href$=\"#/competitions/ignite\"] > .shadow-\\[0_0px_10px_rgba\\(0\\,0\\,0\\,0\\.8\\)\\].hover\\:shadow-\\[0_0px_20px_rgba\\(0\\,0\\,0\\,1\\)\\].hover\\:-translate-y-1 > .h-64.group.overflow-hidden > .bottom-4.left-4.gap-3 > .px-2\\.5.py-0\\.5.border-transparent"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.61 (foreground color: #cf6c08, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"text-sm text-muted-foreground\"> Credits: Times of India</span>",
+          "target": [
+            ".align-center.transition-shadow.hover\\:shadow-xl:nth-child(1) > .mb-4.items-center.flex > span"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.32 (foreground color: #755c57, background color: #e7d6c5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<p class=\"text-muted-foreground mb-4 text-justify\">An expedition around Gau Island aimed at finding the critically endangered Fiji petrel did not result in any sightings. However, researchers gathered ...</p>",
+          "target": [
+            ".align-center.transition-shadow.hover\\:shadow-xl:nth-child(1) > .text-justify.mb-4"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.32 (foreground color: #755c57, background color: #e7d6c5, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<a href=\"https://timesofindia.indiatimes.com/science/wildlife/scientists-spent-10-days-searching-fijis-seas-for-a-bird-believed-to-number-fewer-than-50-worldwide-but-saw-none-instead-they-uncovered-the-only-known-recording-of-its-call-deepening-the-mystery-of-its-survival-/articleshow/135856797.cms\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"inline-flex items-center text-primary hover:text-primary/80 font-medium\">",
+          "target": [
+            ".align-center.transition-shadow.hover\\:shadow-xl:nth-child(1) > .hover\\:text-primary\\/80.inline-flex[rel=\"noopener noreferrer\"]"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.55 (foreground color: #97624e, background color: #e7d6c5, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"text-sm text-muted-foreground\"> Credits: The Hindu</span>",
+          "target": [
+            ".align-center.transition-shadow.hover\\:shadow-xl:nth-child(2) > .mb-4.items-center.flex > span"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.32 (foreground color: #755c57, background color: #e7d6c5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<p class=\"text-muted-foreground mb-4 text-justify\">To bridge the gap between data being recorded by satellites and data being available to users on the ground, operators are pursuing a solution called ...</p>",
+          "target": [
+            ".align-center.transition-shadow.hover\\:shadow-xl:nth-child(2) > .text-justify.mb-4"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.32 (foreground color: #755c57, background color: #e7d6c5, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<a href=\"https://www.thehindu.com/sci-tech/science/orbital-computing-could-let-scientists-rent-brainpower-in-space/article71707329.ece\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"inline-flex items-center text-primary hover:text-primary/80 font-medium\">",
+          "target": [
+            ".align-center.transition-shadow.hover\\:shadow-xl:nth-child(2) > .hover\\:text-primary\\/80.inline-flex[rel=\"noopener noreferrer\"]"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.55 (foreground color: #97624e, background color: #e7d6c5, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"text-sm text-muted-foreground\"> Credits: NDTV</span>",
+          "target": [
+            ".align-center.transition-shadow.hover\\:shadow-xl:nth-child(3) > .mb-4.items-center.flex > span"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.32 (foreground color: #755c57, background color: #e7d6c5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<p class=\"text-muted-foreground mb-4 text-justify\">Harvard Scientist Disagrees With NASA Chief, Says Mysterious Space Object Is Not An Asteroid&nbsp;&nbsp;NDTV...</p>",
+          "target": [
+            ".align-center.transition-shadow.hover\\:shadow-xl:nth-child(3) > .text-justify.mb-4"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.32 (foreground color: #755c57, background color: #e7d6c5, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<a href=\"https://news.google.com/rss/articles/CBMiyAFBVV95cUxPQldsSkVmX3Q5elowa0ZIZHZFZDJNdWktOVVGNWZ4MjJxVWxYZzF1QjlDMWVUcVdyQlctcnhmaENHZmRFQ3hMN1ZjZUtpbjFGZVYyTHV0bkdJdVg3MTNQREVGMUg5X3d0bzVOYXhqbm1lNTdsbno2MDVHSUg4WDBCc3pMaHFFNWZKUEM1OEFoODAtSUpNOWI1UG9xTDZuc3ZrRmU5R09uYlBxZUJ1MXN6R1RaZE5PRHMtWTNEbk5Ra3RpMmJmN09ubtIB0AFBVV95cUxOa3k4S2d5MnlUSDhPX1YwRmctMi1sRkEtcmZicU9nUjNMOGlueWtTSllrU1V4ZDlGNWtOUXlacHdoU3pyeUxnS1N4VjlPRlFOTG11WEFNemlSNVVYa1NRZHRHN040YnBnYlJxZVNRMk5MWThqd3RFdGxjQkdpeElOQnJOdng2a3V4cG40MWpWN2pjb3ZMRHdBQVAzN215dVB1Rm45enRfM0NEWDlRQ2VDLTZtVkx5R2xqYUV2Q1lIaThCNGx4RVM4YW1GT3o4Ql9s?oc=5\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"inline-flex items-center text-primary hover:text-primary/80 font-medium\">",
+          "target": [
+            ".align-center.transition-shadow.hover\\:shadow-xl:nth-child(3) > .hover\\:text-primary\\/80.inline-flex[rel=\"noopener noreferrer\"]"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.55 (foreground color: #97624e, background color: #e7d6c5, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "id": "heading-order",
+      "impact": "moderate",
+      "count": 2,
+      "nodes": [
+        {
+          "html": "<h3 class=\"text-2xl font-bold mb-2 text-foreground group-hover:text-primary transition-colors\">Chitti Tamil</h3>",
+          "target": [
+            ".hover\\:border-primary\\/50.hover\\:shadow-2xl[rel=\"noopener noreferrer\"]:nth-child(1) > .group-hover\\:text-primary.mb-2.text-2xl"
+          ],
+          "summary": "Fix any of the following:\n  Heading order invalid"
+        },
+        {
+          "html": "<h5 class=\"font-medium text-foreground mb-3\">Join Our Community</h5>",
+          "target": [
+            "div:nth-child(4) > h5"
+          ],
+          "summary": "Fix any of the following:\n  Heading order invalid"
+        }
+      ]
+    },
+    {
+      "id": "region",
+      "impact": "moderate",
+      "count": 63,
+      "nodes": [
+        {
+          "html": "<div class=\"absolute inset-0 w-full h-full\">",
+          "target": [
+            ".h-full.inset-0.w-full"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        },
+        {
+          "html": "<div class=\"animate-fade-in-up\" style=\"animation: auto ease 0s 1 normal none running none; opacity: 0;\">",
+          "target": [
+            ".translate-y-10.duration-1000.ease-in-out:nth-child(1) > .max-w-2xl.pl-4.sm\\:pl-8 > .animate-fade-in-up"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        },
+        {
+          "html": "<div style=\"animation: auto ease 0s 1 normal none running none; opacity: 0;\"><p class=\"text-base sm:text-lg lg:text-2xl text-white/90 font-body mb-8 leading-relaxed drop-shadow-lg\">India's premier youth innovation challenge in STEM</p></div>",
+          "target": [
+            ".translate-y-10.duration-1000.ease-in-out:nth-child(1) > .max-w-2xl.pl-4.sm\\:pl-8 > div:nth-child(2)"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        },
+        {
+          "html": "<div class=\"animate-fade-in-up\" style=\"animation: auto ease 0s 1 normal none running none; opacity: 0;\">",
+          "target": [
+            ".translate-y-10.duration-1000.ease-in-out:nth-child(2) > .max-w-2xl.pl-4.sm\\:pl-8 > .animate-fade-in-up"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        },
+        {
+          "html": "<div style=\"animation: auto ease 0s 1 normal none running none; opacity: 0;\"><p class=\"text-base sm:text-lg lg:text-2xl text-white/90 font-body mb-8 leading-relaxed drop-shadow-lg\">Join thousands of students building products for India's tech sovereignty</p></div>",
+          "target": [
+            ".translate-y-10.duration-1000.ease-in-out:nth-child(2) > .max-w-2xl.pl-4.sm\\:pl-8 > div:nth-child(2)"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        },
+        {
+          "html": "<div class=\"animate-fade-in-up\" style=\"animation: 0.8s ease-out 0.1s 1 normal forwards running fadeInUp; opacity: 1;\">",
+          "target": [
+            ".translate-y-0 > .max-w-2xl.pl-4.sm\\:pl-8 > .animate-fade-in-up"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        },
+        {
+          "html": "<div style=\"animation: 0.8s ease-out 0.3s 1 normal forwards running fadeInUp; opacity: 1;\"><p class=\"text-base sm:text-lg lg:text-2xl text-white/90 font-body mb-8 leading-relaxed drop-shadow-lg\">Developing indigenous technology to lead the world from the heart of India.</p></div>",
+          "target": [
+            ".translate-y-0 > .max-w-2xl.pl-4.sm\\:pl-8 > div:nth-child(2)"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        },
+        {
+          "html": "<div class=\"text-center mb-12\">",
+          "target": [
+            "section:nth-child(3) > .container.sm\\:px-6.lg\\:px-8 > .mb-12.text-center"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        },
+        {
+          "html": "<div class=\"rounded-3xl overflow-hidden border border-border/50 bg-background shadow-lg\">",
+          "target": [
+            ".border-border\\/50.bg-background.rounded-3xl"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        },
+        {
+          "html": "<div class=\"text-center mb-12\">",
+          "target": [
+            "section:nth-child(4) > .container.sm\\:px-6.lg\\:px-8 > .mb-12.text-center"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        },
+        {
+          "html": "<div class=\"group relative h-64 overflow-hidden\">",
+          "target": [
+            "a[href$=\"#/competitions/arise\"] > .shadow-\\[0_0px_10px_rgba\\(0\\,0\\,0\\,0\\.8\\)\\].hover\\:shadow-\\[0_0px_20px_rgba\\(0\\,0\\,0\\,1\\)\\].hover\\:-translate-y-1 > .h-64.group.overflow-hidden"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        },
+        {
+          "html": "<h3 class=\"text-2xl font-heading font-bold text-foreground\">ARISE</h3>",
+          "target": [
+            "a[href$=\"#/competitions/arise\"] > .shadow-\\[0_0px_10px_rgba\\(0\\,0\\,0\\,0\\.8\\)\\].hover\\:shadow-\\[0_0px_20px_rgba\\(0\\,0\\,0\\,1\\)\\].hover\\:-translate-y-1 > .space-y-4.p-6 > .text-2xl"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        }
+      ]
+    },
+    {
+      "id": "select-name",
+      "impact": "critical",
+      "count": 3,
+      "nodes": [
+        {
+          "html": "<select required=\"\" name=\"grade\" class=\"flex h-10 w-full rounded-md border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring\">",
+          "target": [
+            "select[name=\"grade\"]"
+          ],
+          "summary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+        },
+        {
+          "html": "<select required=\"\" class=\"flex h-10 w-full rounded-md border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:opacity-50 disabled:cursor-not-allowed\">",
+          "target": [
+            ".space-y-1:nth-child(2) > select"
+          ],
+          "summary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+        },
+        {
+          "html": "<select required=\"\" name=\"stream\" class=\"flex h-10 w-full rounded-md border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring\">",
+          "target": [
+            "select[name=\"stream\"]"
+          ],
+          "summary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+        }
+      ]
+    }
+  ],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "count": 67
+    }
+  ]
+}

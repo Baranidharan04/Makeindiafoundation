@@ -23,12 +23,14 @@ const IndexPage = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
-      <Hero />
-      <Mission />
-      <CompetitionSection />
-      <InnovatorJourney />
-      <TrendingNews />
-      <ScienceSimplified />
+      <main id="main-content">
+        <Hero />
+        <Mission />
+        <CompetitionSection />
+        <InnovatorJourney />
+        <TrendingNews />
+        <ScienceSimplified />
+      </main>
       <Footer />
     </div>
   );

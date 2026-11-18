@@ -1,0 +1,105 @@
+SUPERTOOL
+Login
+SuperTool Beta9
+MX Lookup 
+mx:makeindiafoundation.orgFind Problems   Solve Email Delivery Problems
+
+ mx
+
+  
+
+Pref
+Hostname
+IP Address
+TTL
+36
+route2.mx.cloudflare.net
+162.159.205.17
+Cloudflare, Inc. (AS13335)
+5 min
+Blacklist Check      SMTP Test
+36
+route2.mx.cloudflare.net
+2606:4700:f5::f
+5 min
+Blacklist Check
+58
+route1.mx.cloudflare.net
+162.159.205.11
+Cloudflare, Inc. (AS13335)
+5 min
+Blacklist Check      SMTP Test
+58
+route1.mx.cloudflare.net
+2606:4700:f5::c
+5 min
+Blacklist Check
+60
+route3.mx.cloudflare.net
+162.159.205.23
+Cloudflare, Inc. (AS13335)
+5 min
+Blacklist Check      SMTP Test
+60
+route3.mx.cloudflare.net
+2606:4700:f5::12
+5 min
+Blacklist Check
+Test
+Result
+DNS Record Published
+DNS Record found
+Related Tests
+Result
+BIMI Record Published
+Brand Logo not appearing in inboxes
+ More Info
+DMARC Record Published
+DMARC Record found
+DMARC Policy Not Enabled
+DMARC Quarantine/Reject policy enabled
+dns lookup	dns check	dmarc lookup	spf lookup	dns propagation
+Reported by eric.ns.cloudflare.com on 11/16/2026 at 11:20:22 PM (UTC -6), just for you.  
+Transcript
+ABOUT THE SUPERTOOL!
+
+All of your MX record, DNS, blacklist and SMTP diagnostics in one integrated tool.  Input a domain name or IP Address or Host Name. Links in the results will guide you to other relevant tools and information.  And you'll have a chronological history of your results. 
+
+If you already know exactly what you want, you can force a particular test or lookup.  Try some of these examples:
+
+(e.g. "blacklist: 127.0.0.2" will do a blacklist lookup)
+
+
+
+Command	 	Explanation
+a:	 	DNS A record IP address for host name
+aaaa:	 	DNS AAAA record IPv6 address for host name
+arin:	 	Get IP address block information
+asn:	 	Lookup ASN entries for an IP address
+bimi:	 	Check BIMI record for a domain
+blacklist:	 	Check IP or host for reputation
+cname:	 	DNS canonical host name to IP address
+dkim:	 	Check DKIM records for a domain
+dmarc:	 	Lookup DMARC record for a domain
+dns:	 	Check your DNS Servers for possible problems
+http:	 	Verify a URL allows http connections  
+https:	 	Verify a URL allows secure http connections  
+mta-sts:	 	Check MTA-STS policy & record for a domain New!
+mx:	 	DNS MX records for domain
+ping:	 	Perform a standard ICMP ping
+ptr:	 	DNS PTR record for host name
+smtp:	 	Test mail server SMTP (port 25)
+soa:	 	Get Start of Authority record for a domain
+spf:	 	Check SPF records on a domain
+tcp:	 	Verify an IP Address allows tcp connections
+tlsrpt:	 	Lookup TLSRPT record for a domain New!
+trace:	 	Perform a standard ICMP trace route
+txt:	 	Check TXT records on a domain
+whois:	 	Get domain registration information
+ 	 	 
+Other tools
+
+
+
+Feedback: If you run into any problems with the site or have an idea that you think would make it better, we would appreciate your feedback. Please leave us some Feedback.
+

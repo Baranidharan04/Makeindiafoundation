@@ -5,7 +5,7 @@ const AboutPage = () => {
     <div className="min-h-screen flex flex-col bg-background">
       <Navigation />
 
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-primary/20">
           <div className="absolute inset-0 overflow-hidden">
             <div className="absolute top-1/4 left-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl animate-pulse"></div>

@@ -51,15 +51,15 @@ const PARTNERS = [
   },
   {
     name: "PTU",
-    logo: "https://aicpecf.org/assets/ptu-logo-DP1QNExA.png",
+    logo: "src/assets/partners/ptu-logo.webp",
   },
 ];
 
 const LinkColumn = ({ title, links, icon: Icon }) => (
   <div>
     <div className="flex items-center gap-2 mb-4">
-      {Icon && <Icon className="w-5 h-5 text-primary" />}
-      <h4 className="font-heading font-bold text-lg text-foreground">{title}</h4>
+      {Icon && <Icon className="w-5 h-5 text-primary" aria-hidden="true" />}
+      <h3 className="font-heading font-bold text-lg text-foreground">{title}</h3>
     </div>
     <ul className="space-y-3">
       {links.map((link) => (
@@ -158,7 +158,7 @@ const Footer = () => {
                 <span className="text-3xl font-heading font-bold text-foreground">
                   Make India
                 </span>
-                <span className="block text-sm font-bold text-orange-500">
+                <span className="block text-sm font-extrabold text-amber-900">
                   Foundation
                 </span>
               </div>
@@ -178,7 +178,7 @@ const Footer = () => {
             </div>
 
             <div>
-              <h5 className="font-medium text-foreground mb-3">Join Our Community</h5>
+              <h3 className="font-heading font-bold text-lg text-foreground mb-3">Join Our Community</h3>
               <div className="flex flex-wrap gap-3">
                 {SOCIAL_LINKS.map((social) => (
                   <SocialButton key={social.label} social={social} />
@@ -207,9 +207,9 @@ const Footer = () => {
         </div>
 
         <div className="mb-12 pt-8 border-t border-border/30">
-          <h5 className="text-center font-medium text-foreground mb-6">
+          <h3 className="text-center font-heading font-bold text-lg text-foreground mb-6">
             Supporters and Partners
-          </h5>
+          </h3>
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
             {PARTNERS.map((partner) => (
               <div
@@ -219,6 +219,7 @@ const Footer = () => {
                 <img
                   src={partner.logo}
                   alt={partner.name}
+                  loading="lazy"
                   className="h-12 md:h-16 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity"
                   title={partner.name}
                 />
@@ -230,16 +231,18 @@ const Footer = () => {
         <div className="mb-12 p-8 bg-primary/5 rounded-2xl border border-primary/20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
             <div>
-              <h5 className="font-heading font-bold text-lg text-foreground mb-2">
+              <h3 className="font-heading font-bold text-lg text-foreground mb-2">
                 Stay Updated with Innovation Challenges
-              </h5>
+              </h3>
               <p className="text-sm text-muted-foreground">
                 Get project ideas, competition updates, and resources delivered to your inbox.
               </p>
             </div>
             <div className="flex flex-col gap-3">
               <div className="flex gap-3">
+                <label htmlFor="footer-newsletter-email" className="sr-only">Your email address</label>
                 <input
+                  id="footer-newsletter-email"
                   type="email"
                   value={email}
                   onChange={(e) => { setEmail(e.target.value); setSubStatus("idle"); }}
@@ -248,6 +251,7 @@ const Footer = () => {
                   className="flex-1 bg-background border border-border rounded-xl px-4 py-3 text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
                 />
                 <Button
+                  type="button"
                   onClick={handleSubscribe}
                   disabled={subStatus === "submitting"}
                   className="bg-primary hover:bg-primary-dark disabled:opacity-60 disabled:cursor-not-allowed"
@@ -255,8 +259,10 @@ const Footer = () => {
                   {subStatus === "submitting" ? "Subscribing..." : "Subscribe"}
                 </Button>
               </div>
-              {subStatus === "done" && <p className="text-sm text-emerald-500">Thanks for subscribing!</p>}
-              {subStatus === "error" && <p className="text-sm text-red-500">Please enter a valid email address.</p>}
+              <div role="status" aria-live="polite">
+                {subStatus === "done" && <p className="text-sm text-emerald-600 font-medium">Thanks for subscribing!</p>}
+                {subStatus === "error" && <p className="text-sm text-red-600 font-medium">Please enter a valid email address.</p>}
+              </div>
             </div>
           </div>
         </div>

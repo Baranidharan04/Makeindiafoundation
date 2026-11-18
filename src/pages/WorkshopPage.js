@@ -1,14 +1,14 @@
 
-var workshopHero = 'src/assets/hero/hero_2.png';
-var fewoImg = 'src/assets/keerthan-dm-XA92214FLiM-unsplash.jpg';
-var hero2 = 'src/assets/hero/hero2.png';
+var workshopHero = 'src/assets/hero/hero_2.webp';
+var fewoImg = 'src/assets/keerthan-dm-XA92214FLiM-unsplash.webp';
+var hero2 = 'src/assets/hero/hero2.webp';
 var stemPilotPhotos = [
-  { src: 'src/assets/workshops/stem-pilot-electronics.jpg', alt: 'Students building electronics together' },
-  { src: 'src/assets/workshops/stem-pilot-mentor-session.jpg', alt: 'Mentor guiding students during a STEM session' },
-  { src: 'src/assets/workshops/stem-pilot-components.jpg', alt: 'Components arranged for a collaborative workshop build' },
-  { src: 'src/assets/workshops/stem-pilot-3d-printer.jpg', alt: 'Student working with a 3D printer' },
-  { src: 'src/assets/workshops/stem-pilot-components-sorting.jpg', alt: 'Students sorting workshop components' },
-  { src: 'src/assets/workshops/stem-pilot-collaboration.jpg', alt: 'Students collaborating on a project' }
+  { src: 'src/assets/workshops/stem-pilot-electronics.webp', alt: 'Students building electronics together' },
+  { src: 'src/assets/workshops/stem-pilot-mentor-session.webp', alt: 'Mentor guiding students during a STEM session' },
+  { src: 'src/assets/workshops/stem-pilot-components.webp', alt: 'Components arranged for a collaborative workshop build' },
+  { src: 'src/assets/workshops/stem-pilot-3d-printer.webp', alt: 'Student working with a 3D printer' },
+  { src: 'src/assets/workshops/stem-pilot-components-sorting.webp', alt: 'Students sorting workshop components' },
+  { src: 'src/assets/workshops/stem-pilot-collaboration.webp', alt: 'Students collaborating on a project' }
 ];
 var stemPilotInstagramUrl = 'https://www.instagram.com/p/DdikQcmkyfq/?cplk=a3dkbjE3dzdsY2Qw&img_index=1';
 var stemPilotAlbumUrl = 'https://drive.google.com/drive/folders/1wMMWlywJqkaZqNRmC26A8j9telb89cQQ?usp=sharing';
@@ -50,6 +50,7 @@ const WorkshopPage = () => {
     <div className="min-h-screen flex flex-col bg-[#e6d4c1] text-[#1f1713]">
       <Navigation />
 
+      <main id="main-content" className="flex-1">
       <section className="relative h-[440px] md:h-[560px] flex items-center justify-center overflow-hidden bg-slate-950 text-white">
         <img
           src={workshopHero}
@@ -199,6 +200,7 @@ const WorkshopPage = () => {
            </div>
          </div>
        </section>
+      </main>
       <Footer />
     </div>
   );

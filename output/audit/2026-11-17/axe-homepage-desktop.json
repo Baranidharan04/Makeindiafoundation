@@ -1,0 +1,1306 @@
+{
+  "checkedAt": "2026-11-17T05:12:36.764Z",
+  "url": "https://makeindiafoundation.org/",
+  "axeVersion": "4.10.3",
+  "violations": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "count": 26,
+      "nodes": [
+        {
+          "html": "<p class=\"text-muted-foreground leading-relaxed\">Science is the foundation for observation, hypothesis, and experimentation\u2014forming the basis for engineering solutions.</p>",
+          "target": [
+            ".border-border\\/50.bg-background.rounded-3xl > .p-8 > .leading-relaxed"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.32 (foreground color: #755c57, background color: #e7d6c5, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "data": [
+            {
+              "fgColor": "#755c57",
+              "bgColor": "#e7d6c5",
+              "contrastRatio": 4.32,
+              "fontSize": "12.0pt (16px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          ]
+        },
+        {
+          "html": "<span class=\"inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors bg-primary text-primary-foreground border-transparent bg-white px-3 py-1 text-xs uppercase font-semibold\" style=\"color: rgb(207, 108, 8);\">High school</span>",
+          "target": [
+            "a[href$=\"#/competitions/arise\"] > .shadow-\\[0_0px_10px_rgba\\(0\\,0\\,0\\,0\\.8\\)\\].hover\\:shadow-\\[0_0px_20px_rgba\\(0\\,0\\,0\\,1\\)\\].hover\\:-translate-y-1 > .h-64.group.overflow-hidden > .bottom-4.left-4.gap-3 > .px-2\\.5.py-0\\.5.border-transparent"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.61 (foreground color: #cf6c08, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "data": [
+            {
+              "fgColor": "#cf6c08",
+              "bgColor": "#ffffff",
+              "contrastRatio": 3.61,
+              "fontSize": "9.0pt (12px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          ]
+        },
+        {
+          "html": "<span class=\"inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors bg-primary text-primary-foreground border-transparent bg-white px-3 py-1 text-xs uppercase font-semibold\" style=\"color: rgb(207, 108, 8);\">Middle school</span>",
+          "target": [
+            "a[href$=\"#/competitions/ignite\"] > .shadow-\\[0_0px_10px_rgba\\(0\\,0\\,0\\,0\\.8\\)\\].hover\\:shadow-\\[0_0px_20px_rgba\\(0\\,0\\,0\\,1\\)\\].hover\\:-translate-y-1 > .h-64.group.overflow-hidden > .bottom-4.left-4.gap-3 > .px-2\\.5.py-0\\.5.border-transparent"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.61 (foreground color: #cf6c08, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "data": [
+            {
+              "fgColor": "#cf6c08",
+              "bgColor": "#ffffff",
+              "contrastRatio": 3.61,
+              "fontSize": "9.0pt (12px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          ]
+        },
+        {
+          "html": "<span class=\"text-sm text-muted-foreground\"> Credits: Times of India</span>",
+          "target": [
+            ".align-center.transition-shadow.hover\\:shadow-xl:nth-child(1) > .mb-4.items-center.flex > span"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.32 (foreground color: #755c57, background color: #e7d6c5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "data": [
+            {
+              "fgColor": "#755c57",
+              "bgColor": "#e7d6c5",
+              "contrastRatio": 4.32,
+              "fontSize": "10.5pt (14px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          ]
+        },
+        {
+          "html": "<p class=\"text-muted-foreground mb-4 text-justify\">An expedition around Gau Island aimed at finding the critically endangered Fiji petrel did not result in any sightings. However, researchers gathered ...</p>",
+          "target": [
+            ".align-center.transition-shadow.hover\\:shadow-xl:nth-child(1) > .text-justify.mb-4"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.32 (foreground color: #755c57, background color: #e7d6c5, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "data": [
+            {
+              "fgColor": "#755c57",
+              "bgColor": "#e7d6c5",
+              "contrastRatio": 4.32,
+              "fontSize": "12.0pt (16px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          ]
+        },
+        {
+          "html": "<a href=\"https://timesofindia.indiatimes.com/science/wildlife/scientists-spent-10-days-searching-fijis-seas-for-a-bird-believed-to-number-fewer-than-50-worldwide-but-saw-none-instead-they-uncovered-the-only-known-recording-of-its-call-deepening-the-mystery-of-its-survival-/articleshow/135856797.cms\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"inline-flex items-center text-primary hover:text-primary/80 font-medium\">",
+          "target": [
+            ".align-center.transition-shadow.hover\\:shadow-xl:nth-child(1) > .hover\\:text-primary\\/80.inline-flex[rel=\"noopener noreferrer\"]"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.55 (foreground color: #97624e, background color: #e7d6c5, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "data": [
+            {
+              "fgColor": "#97624e",
+              "bgColor": "#e7d6c5",
+              "contrastRatio": 3.55,
+              "fontSize": "12.0pt (16px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          ]
+        },
+        {
+          "html": "<span class=\"text-sm text-muted-foreground\"> Credits: The Hindu</span>",
+          "target": [
+            ".align-center.transition-shadow.hover\\:shadow-xl:nth-child(2) > .mb-4.items-center.flex > span"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.32 (foreground color: #755c57, background color: #e7d6c5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "data": [
+            {
+              "fgColor": "#755c57",
+              "bgColor": "#e7d6c5",
+              "contrastRatio": 4.32,
+              "fontSize": "10.5pt (14px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          ]
+        },
+        {
+          "html": "<p class=\"text-muted-foreground mb-4 text-justify\">To bridge the gap between data being recorded by satellites and data being available to users on the ground, operators are pursuing a solution called ...</p>",
+          "target": [
+            ".align-center.transition-shadow.hover\\:shadow-xl:nth-child(2) > .text-justify.mb-4"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.32 (foreground color: #755c57, background color: #e7d6c5, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "data": [
+            {
+              "fgColor": "#755c57",
+              "bgColor": "#e7d6c5",
+              "contrastRatio": 4.32,
+              "fontSize": "12.0pt (16px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          ]
+        },
+        {
+          "html": "<a href=\"https://www.thehindu.com/sci-tech/science/orbital-computing-could-let-scientists-rent-brainpower-in-space/article71707329.ece\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"inline-flex items-center text-primary hover:text-primary/80 font-medium\">",
+          "target": [
+            ".align-center.transition-shadow.hover\\:shadow-xl:nth-child(2) > .hover\\:text-primary\\/80.inline-flex[rel=\"noopener noreferrer\"]"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.55 (foreground color: #97624e, background color: #e7d6c5, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "data": [
+            {
+              "fgColor": "#97624e",
+              "bgColor": "#e7d6c5",
+              "contrastRatio": 3.55,
+              "fontSize": "12.0pt (16px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          ]
+        },
+        {
+          "html": "<span class=\"text-sm text-muted-foreground\"> Credits: NDTV</span>",
+          "target": [
+            ".align-center.transition-shadow.hover\\:shadow-xl:nth-child(3) > .mb-4.items-center.flex > span"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.32 (foreground color: #755c57, background color: #e7d6c5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "data": [
+            {
+              "fgColor": "#755c57",
+              "bgColor": "#e7d6c5",
+              "contrastRatio": 4.32,
+              "fontSize": "10.5pt (14px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          ]
+        },
+        {
+          "html": "<p class=\"text-muted-foreground mb-4 text-justify\">Harvard Scientist Disagrees With NASA Chief, Says Mysterious Space Object Is Not An Asteroid&nbsp;&nbsp;NDTV...</p>",
+          "target": [
+            ".align-center.transition-shadow.hover\\:shadow-xl:nth-child(3) > .text-justify.mb-4"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.32 (foreground color: #755c57, background color: #e7d6c5, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "data": [
+            {
+              "fgColor": "#755c57",
+              "bgColor": "#e7d6c5",
+              "contrastRatio": 4.32,
+              "fontSize": "12.0pt (16px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          ]
+        },
+        {
+          "html": "<a href=\"https://news.google.com/rss/articles/CBMiyAFBVV95cUxPQldsSkVmX3Q5elowa0ZIZHZFZDJNdWktOVVGNWZ4MjJxVWxYZzF1QjlDMWVUcVdyQlctcnhmaENHZmRFQ3hMN1ZjZUtpbjFGZVYyTHV0bkdJdVg3MTNQREVGMUg5X3d0bzVOYXhqbm1lNTdsbno2MDVHSUg4WDBCc3pMaHFFNWZKUEM1OEFoODAtSUpNOWI1UG9xTDZuc3ZrRmU5R09uYlBxZUJ1MXN6R1RaZE5PRHMtWTNEbk5Ra3RpMmJmN09ubtIB0AFBVV95cUxOa3k4S2d5MnlUSDhPX1YwRmctMi1sRkEtcmZicU9nUjNMOGlueWtTSllrU1V4ZDlGNWtOUXlacHdoU3pyeUxnS1N4VjlPRlFOTG11WEFNemlSNVVYa1NRZHRHN040YnBnYlJxZVNRMk5MWThqd3RFdGxjQkdpeElOQnJOdng2a3V4cG40MWpWN2pjb3ZMRHdBQVAzN215dVB1Rm45enRfM0NEWDlRQ2VDLTZtVkx5R2xqYUV2Q1lIaThCNGx4RVM4YW1GT3o4Ql9s?oc=5\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"inline-flex items-center text-primary hover:text-primary/80 font-medium\">",
+          "target": [
+            ".align-center.transition-shadow.hover\\:shadow-xl:nth-child(3) > .hover\\:text-primary\\/80.inline-flex[rel=\"noopener noreferrer\"]"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.55 (foreground color: #97624e, background color: #e7d6c5, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "data": [
+            {
+              "fgColor": "#97624e",
+              "bgColor": "#e7d6c5",
+              "contrastRatio": 3.55,
+              "fontSize": "12.0pt (16px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          ]
+        },
+        {
+          "html": "<span class=\"text-sm font-semibold text-muted-foreground\">1.2M+ Subscribers</span>",
+          "target": [
+            ".hover\\:border-primary\\/50.hover\\:shadow-2xl[rel=\"noopener noreferrer\"]:nth-child(1) > .mb-4.justify-center.items-center > .font-semibold"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.32 (foreground color: #755c57, background color: #e7d6c5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "data": [
+            {
+              "fgColor": "#755c57",
+              "bgColor": "#e7d6c5",
+              "contrastRatio": 4.32,
+              "fontSize": "10.5pt (14px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          ]
+        },
+        {
+          "html": "<div class=\"inline-block bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium mb-4\">Science &amp; Entertainment</div>",
+          "target": [
+            ".hover\\:border-primary\\/50.hover\\:shadow-2xl[rel=\"noopener noreferrer\"]:nth-child(1) > .px-3.py-1.bg-primary\\/10"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.18 (foreground color: #97624e, background color: #dfcab9, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "data": [
+            {
+              "fgColor": "#97624e",
+              "bgColor": "#dfcab9",
+              "contrastRatio": 3.18,
+              "fontSize": "10.5pt (14px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          ]
+        },
+        {
+          "html": "<p class=\"text-muted-foreground mb-6 leading-relaxed text-justify\">Explore fascinating science concepts explained in Tamil through engaging videos and entertaining content.</p>",
+          "target": [
+            ".hover\\:border-primary\\/50.hover\\:shadow-2xl[rel=\"noopener noreferrer\"]:nth-child(1) > .text-justify.mb-6.leading-relaxed"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.32 (foreground color: #755c57, background color: #e7d6c5, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "data": [
+            {
+              "fgColor": "#755c57",
+              "bgColor": "#e7d6c5",
+              "contrastRatio": 4.32,
+              "fontSize": "12.0pt (16px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          ]
+        },
+        {
+          "html": "<span>Visit Channel</span>",
+          "target": [
+            ".hover\\:border-primary\\/50.hover\\:shadow-2xl[rel=\"noopener noreferrer\"]:nth-child(1) > .group-hover\\:gap-3.font-semibold.text-primary > span"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.55 (foreground color: #97624e, background color: #e7d6c5, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "data": [
+            {
+              "fgColor": "#97624e",
+              "bgColor": "#e7d6c5",
+              "contrastRatio": 3.55,
+              "fontSize": "12.0pt (16px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          ]
+        },
+        {
+          "html": "<span class=\"text-sm font-semibold text-muted-foreground\">800K+ Subscribers</span>",
+          "target": [
+            ".hover\\:border-primary\\/50.hover\\:shadow-2xl[rel=\"noopener noreferrer\"]:nth-child(2) > .mb-4.justify-center.items-center > .font-semibold"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.32 (foreground color: #755c57, background color: #e7d6c5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "data": [
+            {
+              "fgColor": "#755c57",
+              "bgColor": "#e7d6c5",
+              "contrastRatio": 4.32,
+              "fontSize": "10.5pt (14px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          ]
+        },
+        {
+          "html": "<div class=\"inline-block bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium mb-4\">STEM Education</div>",
+          "target": [
+            ".hover\\:border-primary\\/50.hover\\:shadow-2xl[rel=\"noopener noreferrer\"]:nth-child(2) > .px-3.py-1.bg-primary\\/10"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.18 (foreground color: #97624e, background color: #dfcab9, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "data": [
+            {
+              "fgColor": "#97624e",
+              "bgColor": "#dfcab9",
+              "contrastRatio": 3.18,
+              "fontSize": "10.5pt (14px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          ]
+        },
+        {
+          "html": "<p class=\"text-muted-foreground mb-6 leading-relaxed text-justify\">Comprehensive science and education content covering physics, chemistry, biology, and technology topics.</p>",
+          "target": [
+            ".hover\\:border-primary\\/50.hover\\:shadow-2xl[rel=\"noopener noreferrer\"]:nth-child(2) > .text-justify.mb-6.leading-relaxed"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.32 (foreground color: #755c57, background color: #e7d6c5, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "data": [
+            {
+              "fgColor": "#755c57",
+              "bgColor": "#e7d6c5",
+              "contrastRatio": 4.32,
+              "fontSize": "12.0pt (16px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          ]
+        },
+        {
+          "html": "<span>Visit Channel</span>",
+          "target": [
+            ".hover\\:border-primary\\/50.hover\\:shadow-2xl[rel=\"noopener noreferrer\"]:nth-child(2) > .group-hover\\:gap-3.font-semibold.text-primary > span"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.55 (foreground color: #97624e, background color: #e7d6c5, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "data": [
+            {
+              "fgColor": "#97624e",
+              "bgColor": "#e7d6c5",
+              "contrastRatio": 3.55,
+              "fontSize": "12.0pt (16px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          ]
+        },
+        {
+          "html": "<span class=\"text-sm font-semibold text-muted-foreground\">10M+ Subscribers</span>",
+          "target": [
+            ".hover\\:border-primary\\/50.hover\\:shadow-2xl[rel=\"noopener noreferrer\"]:nth-child(3) > .mb-4.justify-center.items-center > .font-semibold"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.32 (foreground color: #755c57, background color: #e7d6c5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "data": [
+            {
+              "fgColor": "#755c57",
+              "bgColor": "#e7d6c5",
+              "contrastRatio": 4.32,
+              "fontSize": "10.5pt (14px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          ]
+        },
+        {
+          "html": "<div class=\"inline-block bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium mb-4\">Educational</div>",
+          "target": [
+            ".hover\\:border-primary\\/50.hover\\:shadow-2xl[rel=\"noopener noreferrer\"]:nth-child(3) > .px-3.py-1.bg-primary\\/10"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.18 (foreground color: #97624e, background color: #dfcab9, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "data": [
+            {
+              "fgColor": "#97624e",
+              "bgColor": "#dfcab9",
+              "contrastRatio": 3.18,
+              "fontSize": "10.5pt (14px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          ]
+        },
+        {
+          "html": "<p class=\"text-muted-foreground mb-6 leading-relaxed text-justify\">Free online education platform offering courses in science, math, and other subjects.</p>",
+          "target": [
+            ".hover\\:border-primary\\/50.hover\\:shadow-2xl[rel=\"noopener noreferrer\"]:nth-child(3) > .text-justify.mb-6.leading-relaxed"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.32 (foreground color: #755c57, background color: #e7d6c5, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "data": [
+            {
+              "fgColor": "#755c57",
+              "bgColor": "#e7d6c5",
+              "contrastRatio": 4.32,
+              "fontSize": "12.0pt (16px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          ]
+        },
+        {
+          "html": "<span>Visit Channel</span>",
+          "target": [
+            ".hover\\:border-primary\\/50.hover\\:shadow-2xl[rel=\"noopener noreferrer\"]:nth-child(3) > .group-hover\\:gap-3.font-semibold.text-primary > span"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.55 (foreground color: #97624e, background color: #e7d6c5, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "data": [
+            {
+              "fgColor": "#97624e",
+              "bgColor": "#e7d6c5",
+              "contrastRatio": 3.55,
+              "fontSize": "12.0pt (16px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          ]
+        },
+        {
+          "html": "<span class=\"block text-sm font-bold text-orange-500\">Foundation</span>",
+          "target": [
+            ".text-orange-500.block"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.16 (foreground color: #f97316, background color: #ede0d4, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1",
+          "data": [
+            {
+              "fgColor": "#f97316",
+              "bgColor": "#ede0d4",
+              "contrastRatio": 2.16,
+              "fontSize": "10.5pt (14px)",
+              "fontWeight": "bold",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          ]
+        },
+        {
+          "html": "<p class=\"text-sm text-muted-foreground\">Get project ideas, competition updates, and resources delivered to your inbox.</p>",
+          "target": [
+            ".lg\\:grid-cols-2.gap-6.grid-cols-1 > div:nth-child(1) > .text-sm"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.48 (foreground color: #755c57, background color: #e9dacd, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "data": [
+            {
+              "fgColor": "#755c57",
+              "bgColor": "#e9dacd",
+              "contrastRatio": 4.48,
+              "fontSize": "10.5pt (14px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "heading-order",
+      "impact": "moderate",
+      "count": 2,
+      "nodes": [
+        {
+          "html": "<h3 class=\"text-2xl font-bold mb-2 text-foreground group-hover:text-primary transition-colors\">Chitti Tamil</h3>",
+          "target": [
+            ".hover\\:border-primary\\/50.hover\\:shadow-2xl[rel=\"noopener noreferrer\"]:nth-child(1) > .group-hover\\:text-primary.mb-2.text-2xl"
+          ],
+          "summary": "Fix any of the following:\n  Heading order invalid",
+          "data": [
+            null
+          ]
+        },
+        {
+          "html": "<h5 class=\"font-medium text-foreground mb-3\">Join Our Community</h5>",
+          "target": [
+            "div:nth-child(4) > h5"
+          ],
+          "summary": "Fix any of the following:\n  Heading order invalid",
+          "data": [
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "region",
+      "impact": "moderate",
+      "count": 49,
+      "nodes": [
+        {
+          "html": "<div class=\"absolute inset-0 w-full h-full\">",
+          "target": [
+            ".inset-0.h-full.w-full"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+          "data": [
+            {
+              "isIframe": false
+            }
+          ]
+        },
+        {
+          "html": "<div class=\"animate-fade-in-up\" style=\"animation: auto ease 0s 1 normal none running none; opacity: 0;\">",
+          "target": [
+            ".translate-y-10.duration-1000.ease-in-out:nth-child(1) > .max-w-2xl.pl-4.sm\\:pl-8 > .animate-fade-in-up"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+          "data": [
+            {
+              "isIframe": false
+            }
+          ]
+        },
+        {
+          "html": "<div style=\"animation: auto ease 0s 1 normal none running none; opacity: 0;\"><p class=\"text-base sm:text-lg lg:text-2xl text-white/90 font-body mb-8 leading-relaxed drop-shadow-lg\">India's premier youth innovation challenge in STEM</p></div>",
+          "target": [
+            ".translate-y-10.duration-1000.ease-in-out:nth-child(1) > .max-w-2xl.pl-4.sm\\:pl-8 > div:nth-child(2)"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+          "data": [
+            {
+              "isIframe": false
+            }
+          ]
+        },
+        {
+          "html": "<div class=\"animate-fade-in-up\" style=\"animation: auto ease 0s 1 normal none running none; opacity: 0;\">",
+          "target": [
+            ".translate-y-10.duration-1000.ease-in-out:nth-child(2) > .max-w-2xl.pl-4.sm\\:pl-8 > .animate-fade-in-up"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+          "data": [
+            {
+              "isIframe": false
+            }
+          ]
+        },
+        {
+          "html": "<div style=\"animation: auto ease 0s 1 normal none running none; opacity: 0;\"><p class=\"text-base sm:text-lg lg:text-2xl text-white/90 font-body mb-8 leading-relaxed drop-shadow-lg\">Join thousands of students building products for India's tech sovereignty</p></div>",
+          "target": [
+            ".translate-y-10.duration-1000.ease-in-out:nth-child(2) > .max-w-2xl.pl-4.sm\\:pl-8 > div:nth-child(2)"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+          "data": [
+            {
+              "isIframe": false
+            }
+          ]
+        },
+        {
+          "html": "<div class=\"animate-fade-in-up\" style=\"animation: 0.8s ease-out 0.1s 1 normal forwards running fadeInUp; opacity: 1;\">",
+          "target": [
+            ".translate-y-0 > .max-w-2xl.pl-4.sm\\:pl-8 > .animate-fade-in-up"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+          "data": [
+            {
+              "isIframe": false
+            }
+          ]
+        },
+        {
+          "html": "<div style=\"animation: 0.8s ease-out 0.3s 1 normal forwards running fadeInUp; opacity: 1;\"><p class=\"text-base sm:text-lg lg:text-2xl text-white/90 font-body mb-8 leading-relaxed drop-shadow-lg\">Developing indigenous technology to lead the world from the heart of India.</p></div>",
+          "target": [
+            ".translate-y-0 > .max-w-2xl.pl-4.sm\\:pl-8 > div:nth-child(2)"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+          "data": [
+            {
+              "isIframe": false
+            }
+          ]
+        },
+        {
+          "html": "<div class=\"text-center mb-12\">",
+          "target": [
+            "section:nth-child(3) > .container.sm\\:px-6.lg\\:px-8 > .mb-12.text-center"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+          "data": [
+            {
+              "isIframe": false
+            }
+          ]
+        },
+        {
+          "html": "<div class=\"rounded-3xl overflow-hidden border border-border/50 bg-background shadow-lg\">",
+          "target": [
+            ".border-border\\/50.bg-background.rounded-3xl"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+          "data": [
+            {
+              "isIframe": false
+            }
+          ]
+        },
+        {
+          "html": "<div class=\"text-center mb-12\">",
+          "target": [
+            "section:nth-child(4) > .container.sm\\:px-6.lg\\:px-8 > .mb-12.text-center"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+          "data": [
+            {
+              "isIframe": false
+            }
+          ]
+        },
+        {
+          "html": "<div class=\"group relative h-64 overflow-hidden\">",
+          "target": [
+            "a[href$=\"#/competitions/arise\"] > .shadow-\\[0_0px_10px_rgba\\(0\\,0\\,0\\,0\\.8\\)\\].hover\\:shadow-\\[0_0px_20px_rgba\\(0\\,0\\,0\\,1\\)\\].hover\\:-translate-y-1 > .h-64.group.overflow-hidden"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+          "data": [
+            {
+              "isIframe": false
+            }
+          ]
+        },
+        {
+          "html": "<h3 class=\"text-2xl font-heading font-bold text-foreground\">ARISE</h3>",
+          "target": [
+            "a[href$=\"#/competitions/arise\"] > .shadow-\\[0_0px_10px_rgba\\(0\\,0\\,0\\,0\\.8\\)\\].hover\\:shadow-\\[0_0px_20px_rgba\\(0\\,0\\,0\\,1\\)\\].hover\\:-translate-y-1 > .space-y-4.p-6 > .text-2xl"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+          "data": [
+            {
+              "isIframe": false
+            }
+          ]
+        },
+        {
+          "html": "<p class=\"text-muted-foreground\">Annual Regional Innovation in Science &amp; Engineering</p>",
+          "target": [
+            "a[href$=\"#/competitions/arise\"] > .shadow-\\[0_0px_10px_rgba\\(0\\,0\\,0\\,0\\.8\\)\\].hover\\:shadow-\\[0_0px_20px_rgba\\(0\\,0\\,0\\,1\\)\\].hover\\:-translate-y-1 > .space-y-4.p-6 > p"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+          "data": [
+            {
+              "isIframe": false
+            }
+          ]
+        },
+        {
+          "html": "<div class=\"group relative h-64 overflow-hidden\">",
+          "target": [
+            "a[href$=\"#/competitions/ignite\"] > .shadow-\\[0_0px_10px_rgba\\(0\\,0\\,0\\,0\\.8\\)\\].hover\\:shadow-\\[0_0px_20px_rgba\\(0\\,0\\,0\\,1\\)\\].hover\\:-translate-y-1 > .h-64.group.overflow-hidden"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+          "data": [
+            {
+              "isIframe": false
+            }
+          ]
+        },
+        {
+          "html": "<h3 class=\"text-2xl font-heading font-bold text-foreground\">IGNITE</h3>",
+          "target": [
+            "a[href$=\"#/competitions/ignite\"] > .shadow-\\[0_0px_10px_rgba\\(0\\,0\\,0\\,0\\.8\\)\\].hover\\:shadow-\\[0_0px_20px_rgba\\(0\\,0\\,0\\,1\\)\\].hover\\:-translate-y-1 > .space-y-4.p-6 > .text-2xl"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+          "data": [
+            {
+              "isIframe": false
+            }
+          ]
+        },
+        {
+          "html": "<div class=\"text-center mb-12\">",
+          "target": [
+            ".duration-700 > .container.sm\\:px-6.lg\\:px-8 > .mb-12.text-center"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+          "data": [
+            {
+              "isIframe": false
+            }
+          ]
+        },
+        {
+          "html": "<div class=\"flex justify-center mb-8 relative\">",
+          "target": [
+            ".h-full.relative:nth-child(1) > .mb-8.justify-center.relative"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+          "data": [
+            {
+              "isIframe": false
+            }
+          ]
+        },
+        {
+          "html": "<div class=\"relative text-center\">",
+          "target": [
+            ".border-primary\\/50 > .text-center.relative"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+          "data": [
+            {
+              "isIframe": false
+            }
+          ]
+        },
+        {
+          "html": "<div class=\"flex justify-center mb-8 relative\"><div class=\"w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center text-white text-2xl font-bold shadow-2xl transform transition-all duration-500 scale-100\"><span class=\"relative z-10\">2</span></div></div>",
+          "target": [
+            ".h-full.relative:nth-child(2) > .mb-8.justify-center.relative"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+          "data": [
+            {
+              "isIframe": false
+            }
+          ]
+        },
+        {
+          "html": "<div class=\"relative text-center\">",
+          "target": [
+            ".h-full.relative:nth-child(2) > a[href=\"#/\"][target=\"_blank\"] > .-translate-y-2.h-\\[calc\\(100\\%-6rem\\)\\].p-8 > .text-center.relative"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+          "data": [
+            {
+              "isIframe": false
+            }
+          ]
+        },
+        {
+          "html": "<div class=\"flex justify-center mb-8 relative\"><div class=\"w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-400 to-teal-500 flex items-center justify-center text-white text-2xl font-bold shadow-2xl transform transition-all duration-500 scale-100\"><span class=\"relative z-10\">3</span></div></div>",
+          "target": [
+            ".h-full.relative:nth-child(3) > .mb-8.justify-center.relative"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+          "data": [
+            {
+              "isIframe": false
+            }
+          ]
+        },
+        {
+          "html": "<div class=\"relative text-center\">",
+          "target": [
+            ".h-full.relative:nth-child(3) > a[href=\"#/\"][target=\"_blank\"] > .-translate-y-2.h-\\[calc\\(100\\%-6rem\\)\\].p-8 > .text-center.relative"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+          "data": [
+            {
+              "isIframe": false
+            }
+          ]
+        },
+        {
+          "html": "<div class=\"flex justify-center mb-8 relative\">",
+          "target": [
+            ".h-full.relative:nth-child(4) > .mb-8.justify-center.relative"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+          "data": [
+            {
+              "isIframe": false
+            }
+          ]
+        },
+        {
+          "html": "<div class=\"relative text-center\">",
+          "target": [
+            ".h-full.relative:nth-child(4) > a[target=\"_blank\"] > .-translate-y-2.h-\\[calc\\(100\\%-6rem\\)\\].p-8 > .text-center.relative"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+          "data": [
+            {
+              "isIframe": false
+            }
+          ]
+        },
+        {
+          "html": "<div class=\"flex justify-center mb-8 relative\"><div class=\"w-16 h-16 rounded-2xl bg-gradient-to-br from-rose-400 to-pink-500 flex items-center justify-center text-white text-2xl font-bold shadow-2xl transform transition-all duration-500 scale-100\"><span class=\"relative z-10\">5</span></div></div>",
+          "target": [
+            ".h-full.relative:nth-child(5) > .mb-8.justify-center.relative"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+          "data": [
+            {
+              "isIframe": false
+            }
+          ]
+        },
+        {
+          "html": "<div class=\"relative text-center\">",
+          "target": [
+            ".h-full.relative:nth-child(5) > a[href=\"#/\"][target=\"_blank\"] > .-translate-y-2.h-\\[calc\\(100\\%-6rem\\)\\].p-8 > .text-center.relative"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+          "data": [
+            {
+              "isIframe": false
+            }
+          ]
+        },
+        {
+          "html": "<section class=\"py-20 bg-card text-foreground relative overflow-hidden\">",
+          "target": [
+            "section:nth-child(6)"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+          "data": [
+            {
+              "isIframe": false
+            }
+          ]
+        },
+        {
+          "html": "<div class=\"flex flex-col items-center justify-center bg-gradient-to-b from-primary/10 to-background py-20 px-8\">",
+          "target": [
+            ".bg-gradient-to-b"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+          "data": [
+            {
+              "isIframe": false
+            }
+          ]
+        },
+        {
+          "html": "<div class=\"mb-6 flex justify-center\">",
+          "target": [
+            ".hover\\:border-primary\\/50.hover\\:shadow-2xl[rel=\"noopener noreferrer\"]:nth-child(1) > .mb-6.justify-center.flex"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+          "data": [
+            {
+              "isIframe": false
+            }
+          ]
+        },
+        {
+          "html": "<div class=\"flex items-center justify-center mb-4\"><span class=\"text-sm font-semibold text-muted-foreground\">1.2M+ Subscribers</span></div>",
+          "target": [
+            ".hover\\:border-primary\\/50.hover\\:shadow-2xl[rel=\"noopener noreferrer\"]:nth-child(1) > .mb-4.justify-center.items-center"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+          "data": [
+            {
+              "isIframe": false
+            }
+          ]
+        },
+        {
+          "html": "<h3 class=\"text-2xl font-bold mb-2 text-foreground group-hover:text-primary transition-colors\">Chitti Tamil</h3>",
+          "target": [
+            ".hover\\:border-primary\\/50.hover\\:shadow-2xl[rel=\"noopener noreferrer\"]:nth-child(1) > .group-hover\\:text-primary.mb-2.text-2xl"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+          "data": [
+            {
+              "isIframe": false
+            }
+          ]
+        },
+        {
+          "html": "<div class=\"inline-block bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium mb-4\">Science &amp; Entertainment</div>",
+          "target": [
+            ".hover\\:border-primary\\/50.hover\\:shadow-2xl[rel=\"noopener noreferrer\"]:nth-child(1) > .px-3.py-1.bg-primary\\/10"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+          "data": [
+            {
+              "isIframe": false
+            }
+          ]
+        },
+        {
+          "html": "<p class=\"text-muted-foreground mb-6 leading-relaxed text-justify\">Explore fascinating science concepts explained in Tamil through engaging videos and entertaining content.</p>",
+          "target": [
+            ".hover\\:border-primary\\/50.hover\\:shadow-2xl[rel=\"noopener noreferrer\"]:nth-child(1) > .text-justify.mb-6.leading-relaxed"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+          "data": [
+            {
+              "isIframe": false
+            }
+          ]
+        },
+        {
+          "html": "<span>Visit Channel</span>",
+          "target": [
+            ".hover\\:border-primary\\/50.hover\\:shadow-2xl[rel=\"noopener noreferrer\"]:nth-child(1) > .group-hover\\:gap-3.font-semibold.text-primary > span"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+          "data": [
+            {
+              "isIframe": false
+            }
+          ]
+        },
+        {
+          "html": "<div class=\"mb-6 flex justify-center\">",
+          "target": [
+            ".hover\\:border-primary\\/50.hover\\:shadow-2xl[rel=\"noopener noreferrer\"]:nth-child(2) > .mb-6.justify-center.flex"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+          "data": [
+            {
+              "isIframe": false
+            }
+          ]
+        },
+        {
+          "html": "<div class=\"flex items-center justify-center mb-4\"><span class=\"text-sm font-semibold text-muted-foreground\">800K+ Subscribers</span></div>",
+          "target": [
+            ".hover\\:border-primary\\/50.hover\\:shadow-2xl[rel=\"noopener noreferrer\"]:nth-child(2) > .mb-4.justify-center.items-center"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+          "data": [
+            {
+              "isIframe": false
+            }
+          ]
+        },
+        {
+          "html": "<h3 class=\"text-2xl font-bold mb-2 text-foreground group-hover:text-primary transition-colors\">Science Channel</h3>",
+          "target": [
+            ".hover\\:border-primary\\/50.hover\\:shadow-2xl[rel=\"noopener noreferrer\"]:nth-child(2) > .group-hover\\:text-primary.mb-2.text-2xl"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+          "data": [
+            {
+              "isIframe": false
+            }
+          ]
+        },
+        {
+          "html": "<div class=\"inline-block bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium mb-4\">STEM Education</div>",
+          "target": [
+            ".hover\\:border-primary\\/50.hover\\:shadow-2xl[rel=\"noopener noreferrer\"]:nth-child(2) > .px-3.py-1.bg-primary\\/10"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+          "data": [
+            {
+              "isIframe": false
+            }
+          ]
+        },
+        {
+          "html": "<p class=\"text-muted-foreground mb-6 leading-relaxed text-justify\">Comprehensive science and education content covering physics, chemistry, biology, and technology topics.</p>",
+          "target": [
+            ".hover\\:border-primary\\/50.hover\\:shadow-2xl[rel=\"noopener noreferrer\"]:nth-child(2) > .text-justify.mb-6.leading-relaxed"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+          "data": [
+            {
+              "isIframe": false
+            }
+          ]
+        },
+        {
+          "html": "<span>Visit Channel</span>",
+          "target": [
+            ".hover\\:border-primary\\/50.hover\\:shadow-2xl[rel=\"noopener noreferrer\"]:nth-child(2) > .group-hover\\:gap-3.font-semibold.text-primary > span"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+          "data": [
+            {
+              "isIframe": false
+            }
+          ]
+        },
+        {
+          "html": "<div class=\"mb-6 flex justify-center\">",
+          "target": [
+            ".hover\\:border-primary\\/50.hover\\:shadow-2xl[rel=\"noopener noreferrer\"]:nth-child(3) > .mb-6.justify-center.flex"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+          "data": [
+            {
+              "isIframe": false
+            }
+          ]
+        },
+        {
+          "html": "<div class=\"flex items-center justify-center mb-4\"><span class=\"text-sm font-semibold text-muted-foreground\">10M+ Subscribers</span></div>",
+          "target": [
+            ".hover\\:border-primary\\/50.hover\\:shadow-2xl[rel=\"noopener noreferrer\"]:nth-child(3) > .mb-4.justify-center.items-center"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+          "data": [
+            {
+              "isIframe": false
+            }
+          ]
+        },
+        {
+          "html": "<h3 class=\"text-2xl font-bold mb-2 text-foreground group-hover:text-primary transition-colors\">Khan Academy</h3>",
+          "target": [
+            ".hover\\:border-primary\\/50.hover\\:shadow-2xl[rel=\"noopener noreferrer\"]:nth-child(3) > .group-hover\\:text-primary.mb-2.text-2xl"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+          "data": [
+            {
+              "isIframe": false
+            }
+          ]
+        },
+        {
+          "html": "<div class=\"inline-block bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium mb-4\">Educational</div>",
+          "target": [
+            ".hover\\:border-primary\\/50.hover\\:shadow-2xl[rel=\"noopener noreferrer\"]:nth-child(3) > .px-3.py-1.bg-primary\\/10"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+          "data": [
+            {
+              "isIframe": false
+            }
+          ]
+        },
+        {
+          "html": "<p class=\"text-muted-foreground mb-6 leading-relaxed text-justify\">Free online education platform offering courses in science, math, and other subjects.</p>",
+          "target": [
+            ".hover\\:border-primary\\/50.hover\\:shadow-2xl[rel=\"noopener noreferrer\"]:nth-child(3) > .text-justify.mb-6.leading-relaxed"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+          "data": [
+            {
+              "isIframe": false
+            }
+          ]
+        },
+        {
+          "html": "<span>Visit Channel</span>",
+          "target": [
+            ".hover\\:border-primary\\/50.hover\\:shadow-2xl[rel=\"noopener noreferrer\"]:nth-child(3) > .group-hover\\:gap-3.font-semibold.text-primary > span"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+          "data": [
+            {
+              "isIframe": false
+            }
+          ]
+        },
+        {
+          "html": "<p class=\"text-sm text-muted-foreground leading-relaxed\">",
+          "target": [
+            ".hover\\:bg-primary\\/10 > .leading-relaxed.text-sm"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+          "data": [
+            {
+              "isIframe": false
+            }
+          ]
+        },
+        {
+          "html": "<div class=\"mt-20 overflow-hidden relative\">",
+          "target": [
+            ".mt-20"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+          "data": [
+            {
+              "isIframe": false
+            }
+          ]
+        },
+        {
+          "html": "<div class=\"max-w-5xl mx-auto mt-16\">",
+          "target": [
+            ".max-w-5xl"
+          ],
+          "summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+          "data": [
+            {
+              "isIframe": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "count": 65
+    }
+  ],
+  "headings": [
+    {
+      "level": "H1",
+      "text": "Young minds,"
+    },
+    {
+      "level": "H2",
+      "text": "Local Ideas"
+    },
+    {
+      "level": "H2",
+      "text": "Global Market"
+    },
+    {
+      "level": "H1",
+      "text": "Design. Build."
+    },
+    {
+      "level": "H2",
+      "text": "Innovate."
+    },
+    {
+      "level": "H2",
+      "text": "Share."
+    },
+    {
+      "level": "H1",
+      "text": "Think Local,"
+    },
+    {
+      "level": "H2",
+      "text": "Create National"
+    },
+    {
+      "level": "H2",
+      "text": "Impact Global"
+    },
+    {
+      "level": "H2",
+      "text": "At MIF STEM Ignites"
+    },
+    {
+      "level": "H3",
+      "text": "Science"
+    },
+    {
+      "level": "H3",
+      "text": "Technology"
+    },
+    {
+      "level": "H3",
+      "text": "Engineering"
+    },
+    {
+      "level": "H3",
+      "text": "Mathematics"
+    },
+    {
+      "level": "H3",
+      "text": "Science"
+    },
+    {
+      "level": "H4",
+      "text": "Why it matters"
+    },
+    {
+      "level": "H2",
+      "text": "Brains > Brawn"
+    },
+    {
+      "level": "H3",
+      "text": "ARISE"
+    },
+    {
+      "level": "H3",
+      "text": "IGNITE"
+    },
+    {
+      "level": "H2",
+      "text": "The Innovator's Journey"
+    },
+    {
+      "level": "H3",
+      "text": "Spark an Idea"
+    },
+    {
+      "level": "H3",
+      "text": "MIF STEM Competition"
+    },
+    {
+      "level": "H3",
+      "text": "MIF Winner"
+    },
+    {
+      "level": "H3",
+      "text": "Global Stage"
+    },
+    {
+      "level": "H3",
+      "text": "Global Recognition"
+    },
+    {
+      "level": "H3",
+      "text": "Spark an Idea"
+    },
+    {
+      "level": "H3",
+      "text": "MIF STEM Competition"
+    },
+    {
+      "level": "H3",
+      "text": "MIF Winner"
+    },
+    {
+      "level": "H3",
+      "text": "Global Stage"
+    },
+    {
+      "level": "H3",
+      "text": "Global Recognition"
+    },
+    {
+      "level": "H2",
+      "text": "Trending News"
+    },
+    {
+      "level": "H3",
+      "text": "Scientists spent 10 days searching Fiji's seas for a bird believed to number fewer than 50 worldwide but saw none; instead, they uncovered the only known recording of its call, deepening the mystery of its survival."
+    },
+    {
+      "level": "H3",
+      "text": "Orbital computing could let scientists rent \u2018brainpower\u2019 in space"
+    },
+    {
+      "level": "H3",
+      "text": "Harvard Scientist Disagrees With NASA Chief, Says Mysterious Space Object Is Not An Asteroid - NDTV"
+    },
+    {
+      "level": "H1",
+      "text": "Science Simplified"
+    },
+    {
+      "level": "H3",
+      "text": "Chitti Tamil"
+    },
+    {
+      "level": "H3",
+      "text": "Science Channel"
+    },
+    {
+      "level": "H3",
+      "text": "Khan Academy"
+    },
+    {
+      "level": "H2",
+      "text": "Our Sponsors"
+    },
+    {
+      "level": "H3",
+      "text": "Ready to Start Your Journey?"
+    },
+    {
+      "level": "H5",
+      "text": "Join Our Community"
+    },
+    {
+      "level": "H4",
+      "text": "Quick Links"
+    },
+    {
+      "level": "H4",
+      "text": "Resources"
+    },
+    {
+      "level": "H4",
+      "text": "Support"
+    },
+    {
+      "level": "H5",
+      "text": "Supporters and Partners"
+    },
+    {
+      "level": "H5",
+      "text": "Stay Updated with Innovation Challenges"
+    }
+  ],
+  "landmarks": [
+    {
+      "tag": "NAV",
+      "label": null
+    },
+    {
+      "tag": "FOOTER",
+      "label": null
+    }
+  ]
+}

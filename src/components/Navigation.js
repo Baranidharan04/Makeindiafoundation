@@ -70,6 +70,9 @@ const NavButton = ({
     return (
       <div className="relative">
         <button
+          type="button"
+          aria-expanded={isDropdownOpen}
+          aria-haspopup="true"
           onClick={() => onDropdownToggle?.(item.id)}
           className={`
             flex items-center gap-2 transition-all duration-200 font-medium relative group
@@ -129,7 +132,7 @@ const MobileMenu = ({ isOpen, items, onRegisterClick, openDropdowns, onDropdownT
   if (!isOpen) return null;
 
   return (
-    <div className="md:hidden animate-fade-in bg-card/95 backdrop-blur-sm rounded-2xl mt-2 p-4 shadow-xl border border-border/50">
+    <div id="mobile-navigation-menu" className="md:hidden animate-fade-in bg-card/95 backdrop-blur-sm rounded-2xl mt-2 p-4 shadow-xl border border-border/50">
       <div className="space-y-1">
         {items.map((item) => (
           <div key={item.id}>
@@ -246,7 +249,7 @@ const Navigation = () => {
       `}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <Link to="/" className="flex items-center space-x-3 group">
+        <Link to="/" aria-label="Make India Foundation Home" className="flex items-center space-x-3 group">
           <div className={`w-12 h-12 rounded-2xl flex items-center justify-center shadow-lg transition-transform duration-300 group-hover:scale-110 ${isScrolled ? "bg-white/10 backdrop-blur-md border border-white/20" : "bg-white/10 backdrop-blur-md border border-white/20"}`}>
             <img src="public/logo.png" alt="Make India Foundation Logo" className="w-8 h-8 object-contain" />
           </div>
@@ -254,7 +257,7 @@ const Navigation = () => {
             <span className={`text-2xl font-heading font-bold transition-colors ${isScrolled ? "text-foreground" : "text-white"}`}>
               Make India
             </span>
-            <span className="text-xs font-bold tracking-[0.2em] text-orange-500 uppercase leading-none mt-0.5">
+            <span className="text-xs font-extrabold tracking-[0.2em] text-amber-900 uppercase leading-none mt-0.5">
               Foundation
             </span>
           </div>
@@ -285,10 +288,14 @@ const Navigation = () => {
         </div>
 
         <button
+          type="button"
+          aria-label={isMobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-expanded={isMobileMenuOpen}
+          aria-controls="mobile-navigation-menu"
           className={`md:hidden p-2 rounded-lg transition-colors ${isScrolled ? "text-foreground hover:bg-primary/10" : "text-white hover:bg-white/10"}`}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
-          {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          {isMobileMenuOpen ? <X className="w-6 h-6" aria-hidden="true" /> : <Menu className="w-6 h-6" aria-hidden="true" />}
         </button>
       </div>
 

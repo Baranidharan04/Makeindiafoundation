@@ -108,12 +108,22 @@ function readJsonBody(request) {
   });
 }
 
+const SECURITY_HEADERS = {
+  'Strict-Transport-Security': 'max-age=31536000; includeSubDomains',
+  'Content-Security-Policy': "default-src 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https: blob:; connect-src 'self' https://static.cloudflareinsights.com https://cloudflareinsights.com; frame-ancestors 'self';",
+  'X-Frame-Options': 'SAMEORIGIN',
+  'X-Content-Type-Options': 'nosniff',
+  'Referrer-Policy': 'strict-origin-when-cross-origin',
+  'Permissions-Policy': 'camera=(), microphone=(), geolocation=()'
+};
+
 function sendJson(response, status, payload) {
   response.writeHead(status, {
     'Content-Type': 'application/json; charset=utf-8',
     'Access-Control-Allow-Origin': '*',
     'Access-Control-Allow-Headers': 'Content-Type',
-    'Access-Control-Allow-Methods': 'POST, OPTIONS'
+    'Access-Control-Allow-Methods': 'POST, OPTIONS',
+    ...SECURITY_HEADERS
   });
   response.end(JSON.stringify(payload));
 }
@@ -287,7 +297,8 @@ createServer(async (request, response) => {
 
   response.writeHead(200, {
     'Content-Type': types[extname(filePath).toLowerCase()] || 'application/octet-stream',
-    'Cache-Control': 'no-cache'
+    'Cache-Control': 'no-cache',
+    ...SECURITY_HEADERS
   });
   createReadStream(filePath).pipe(response);
 }).listen(port, () => {

@@ -93,14 +93,14 @@ const ContactInfoCard = ({ info }) => {
             ))}
           </div>
           {info.action && (
-            <Button
-              variant="ghost"
-              className="mt-4 text-primary hover:text-primary-dark hover:bg-primary/10 p-0 h-auto"
+            <a
+              href={info.action.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center mt-4 text-primary hover:text-primary-dark font-medium transition-colors"
             >
-              <a href={info.action.href} target="_blank" rel="noopener noreferrer">
-                {info.action.text} →
-              </a>
-            </Button>
+              {info.action.text} →
+            </a>
           )}
         </div>
       </div>
@@ -110,6 +110,7 @@ const ContactInfoCard = ({ info }) => {
 
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = React.useState(false);
+  const [status, setStatus] = React.useState({ type: "", text: "" });
   const [formData, setFormData] = React.useState({
     name: "",
     email: "",
@@ -122,9 +123,10 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setStatus({ type: "", text: "" });
     const errors = validateForm(formData);
     if (errors.length > 0) {
-      alert("Please fix the following errors:\n" + errors.join("\n"));
+      setStatus({ type: "error", text: "Please fix the following: " + errors.join(". ") });
       return;
     }
     setIsSubmitting(true);
@@ -144,7 +146,7 @@ const Contact = () => {
         const body = await res.json().catch(() => ({}));
         throw new Error(body.error || "Failed to send message.");
       }
-      alert("Message Sent Successfully! Our student coordinator will contact you within 24 hours.");
+      setStatus({ type: "success", text: "Message sent successfully! Our student coordinator will contact you within 24 hours." });
       setFormData({
         name: "",
         email: "",
@@ -155,7 +157,7 @@ const Contact = () => {
         message: "",
       });
     } catch (err) {
-      alert(err.message || "Failed to send message. Please try again.");
+      setStatus({ type: "error", text: err.message || "Failed to send message. Please try again." });
     } finally {
       setIsSubmitting(false);
     }
@@ -176,9 +178,9 @@ const Contact = () => {
           <Badge className="mb-4 bg-primary/10 text-primary border-primary/20 px-4 py-1.5 text-sm">
             Contact Support
           </Badge>
-          <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">
+          <h1 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">
             We're Here to <span className="text-primary">Help You Innovate</span>
-          </h2>
+          </h1>
           <p className="text-lg text-muted-foreground leading-relaxed">
             Have questions about the competition, workshops, or how to get started?
             Our dedicated support team is ready to assist you on your STEM journey.
@@ -194,16 +196,20 @@ const Contact = () => {
 
           <div className="lg:col-span-2">
             <Card className="p-8 md:p-10 border-border/50 shadow-xl bg-card/50 backdrop-blur-sm">
-              <h3 className="text-2xl font-heading font-bold text-foreground mb-8 flex items-center gap-3">
-                <MessageCircle className="w-6 h-6 text-primary" />
+              <h2 className="text-2xl font-heading font-bold text-foreground mb-8 flex items-center gap-3">
+                <MessageCircle className="w-6 h-6 text-primary" aria-hidden="true" />
                 Send us a Message
-              </h3>
+              </h2>
 
-              <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-6" aria-describedby={status.text ? "contact-form-status" : undefined}>
                 <div className="space-y-2">
-                  <label className="text-sm font-medium text-foreground">Full Name *</label>
+                  <label htmlFor="contact-name" className="text-sm font-medium text-foreground block">
+                    Full Name <span className="text-primary" aria-hidden="true">*</span>
+                  </label>
                   <Input
+                    id="contact-name"
                     name="name"
+                    required
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="Arjun Sharma"
@@ -211,10 +217,14 @@ const Contact = () => {
                   />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-sm font-medium text-foreground">Email Address *</label>
+                  <label htmlFor="contact-email" className="text-sm font-medium text-foreground block">
+                    Email Address <span className="text-primary" aria-hidden="true">*</span>
+                  </label>
                   <Input
+                    id="contact-email"
                     name="email"
                     type="email"
+                    required
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="arjun@email.com"
@@ -222,9 +232,13 @@ const Contact = () => {
                   />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-sm font-medium text-foreground">Phone Number</label>
+                  <label htmlFor="contact-phone" className="text-sm font-medium text-foreground block">
+                    Phone Number
+                  </label>
                   <Input
+                    id="contact-phone"
                     name="phone"
+                    type="tel"
                     value={formData.phone}
                     onChange={handleChange}
                     placeholder="+91 98765 43210"
@@ -232,12 +246,16 @@ const Contact = () => {
                   />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-sm font-medium text-foreground">Interest Category *</label>
+                  <label htmlFor="contact-category" className="text-sm font-medium text-foreground block">
+                    Interest Category <span className="text-primary" aria-hidden="true">*</span>
+                  </label>
                   <select
+                    id="contact-category"
                     name="category"
+                    required
                     value={formData.category}
                     onChange={handleChange}
-                    className="flex h-10 w-full rounded-md border border-input bg-background/50 px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                    className="flex h-10 w-full rounded-md border border-input bg-background/50 px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring text-foreground"
                   >
                     <option value="">Select a category</option>
                     {INTEREST_CATEGORIES.map(cat => (
@@ -246,20 +264,34 @@ const Contact = () => {
                   </select>
                 </div>
                 <div className="md:col-span-2 space-y-2">
-                  <label className="text-sm font-medium text-foreground">How can we help? *</label>
+                  <label htmlFor="contact-message" className="text-sm font-medium text-foreground block">
+                    How can we help? <span className="text-primary" aria-hidden="true">*</span>
+                  </label>
                   <Textarea
+                    id="contact-message"
                     name="message"
+                    required
                     value={formData.message}
                     onChange={handleChange}
                     placeholder="Tell us about your query or project idea..."
                     className="min-h-[150px] bg-background/50"
                   />
                 </div>
+                {status.text && (
+                  <div
+                    id="contact-form-status"
+                    role="status"
+                    aria-live="polite"
+                    className={`md:col-span-2 p-4 rounded-xl text-sm font-medium ${status.type === 'success' ? 'bg-emerald-500/10 text-emerald-600 border border-emerald-500/20' : 'bg-red-500/10 text-red-600 border border-red-500/20'}`}
+                  >
+                    {status.text}
+                  </div>
+                )}
                 <div className="md:col-span-2">
                   <Button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full md:w-auto px-12 py-6 bg-primary hover:bg-primary-dark text-white font-bold text-lg rounded-xl btn-hover-lift"
+                    className="w-full md:w-auto px-12 py-6 bg-primary hover:bg-primary-dark text-white font-bold text-lg rounded-xl btn-hover-lift disabled:opacity-60 disabled:cursor-not-allowed"
                   >
                     {isSubmitting ? (
                       <span className="flex items-center gap-2">
@@ -268,7 +300,7 @@ const Contact = () => {
                       </span>
                     ) : (
                       <span className="flex items-center gap-2">
-                        <Zap className="w-5 h-5" />
+                        <Zap className="w-5 h-5" aria-hidden="true" />
                         Send Message
                       </span>
                     )}

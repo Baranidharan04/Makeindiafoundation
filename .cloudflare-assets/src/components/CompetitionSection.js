@@ -1,5 +1,5 @@
-const c1 = 'src/assets/competitions/c1.png';
-const c2 = 'src/assets/competitions/c2.png';
+const c1 = 'src/assets/competitions/c1.webp';
+const c2 = 'src/assets/competitions/c2.webp';
 
 const competitions = [
   {
@@ -48,10 +48,13 @@ const CompetitionSection = () => {
                   <img
                     src={item.image}
                     alt={item.title}
+                    loading="lazy"
+                    width="1400"
+                    height="768"
                     className="w-full h-full object-cover rounded-lg transform transition-transform duration-500 group-hover:scale-[1.03]"
                   />
                   <div className="absolute bottom-4 left-4 flex items-center gap-3">
-                    <Badge style={{ color: 'hsl(30deg 92.37% 42.24%)' }} className="bg-white px-3 py-1 text-xs uppercase font-semibold">{item.category}</Badge>
+                    <Badge style={{ color: '#9a3412' }} className="bg-white px-3 py-1 text-xs uppercase font-semibold">{item.category}</Badge>
                   </div>
                 </div>
 

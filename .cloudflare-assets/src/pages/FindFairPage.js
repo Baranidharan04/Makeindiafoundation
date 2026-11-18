@@ -112,6 +112,7 @@ const FindFairPage = () => {
     <div className="min-h-screen">
       <Navigation />
 
+      <main id="main-content" className="flex-1">
       <section className="bg-gradient-to-br from-primary/5 via-background to-secondary/5 pt-28 pb-20 sm:pt-36 sm:pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -276,6 +277,7 @@ const FindFairPage = () => {
           </Button>
         </div>
       </section>
+      </main>
 
       <Footer />
     </div>

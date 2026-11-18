@@ -20,7 +20,7 @@ const VolunteerRegistrationPage = () => {
     ['city', 'City / Location', true, 'text'], ['organisation', 'Organisation or school', false, 'text'],
     ['areasOfInterest', 'Areas of interest', true, 'text'], ['availability', 'Availability', true, 'text']
   ];
-  return <div className="min-h-screen flex flex-col bg-background"><Navigation /><main className="flex-1 pt-[110px] pb-16 px-4 sm:px-6">
+  return <div className="min-h-screen flex flex-col bg-background"><Navigation /><main id="main-content" className="flex-1 pt-[110px] pb-16 px-4 sm:px-6">
     <section className="max-w-2xl mx-auto"><div className="text-center mb-10"><p className="text-primary font-bold uppercase tracking-widest text-sm">Join the movement</p><h1 className="font-heading text-4xl sm:text-5xl font-bold text-foreground mt-3">Volunteer Registration</h1><p className="text-muted-foreground mt-4">Share your skills and time to help us make STEM learning accessible to every child.</p></div>
       <form onSubmit={submit} className="bg-card rounded-2xl border border-border/60 shadow-lg p-6 sm:p-8 space-y-5" noValidate>
         {fields.map(([name, label, required, type]) => <div key={name}><label htmlFor={name} className="block text-sm font-semibold text-foreground mb-2">{label}{required && <span className="text-primary ml-1" aria-hidden="true">*</span>}</label><input id={name} name={name} type={type} value={form[name]} onChange={update} required={required} className="w-full rounded-lg border border-border bg-background px-4 py-3 text-foreground outline-none focus:ring-2 focus:ring-primary focus:border-primary" /></div>)}

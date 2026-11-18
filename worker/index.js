@@ -2,16 +2,26 @@
 const MAX_BODY_BYTES = 16_384;
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+const SECURITY_HEADERS = {
+  'Strict-Transport-Security': 'max-age=31536000; includeSubDomains',
+  'Content-Security-Policy': "default-src 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https: blob:; connect-src 'self' https://static.cloudflareinsights.com https://cloudflareinsights.com; frame-ancestors 'self';",
+  'X-Frame-Options': 'SAMEORIGIN',
+  'X-Content-Type-Options': 'nosniff',
+  'Referrer-Policy': 'strict-origin-when-cross-origin',
+  'Permissions-Policy': 'camera=(), microphone=(), geolocation=()'
+};
+
 function cors(request, env) {
   const origin = request.headers.get('Origin');
   return {
     ...(env.ALLOWED_ORIGIN && origin === env.ALLOWED_ORIGIN ? { 'Access-Control-Allow-Origin': origin, Vary: 'Origin' } : {}),
     'Access-Control-Allow-Headers': 'Content-Type',
     'Access-Control-Allow-Methods': 'POST, OPTIONS',
+    ...SECURITY_HEADERS,
   };
 }
 function reply(request, env, status, payload) {
-  return new Response(JSON.stringify(payload), { status, headers: { 'Content-Type': 'application/json; charset=utf-8', ...cors(request, env) } });
+  return new Response(JSON.stringify(payload), { status, headers: { 'Content-Type': 'application/json; charset=utf-8', ...cors(request, env), ...SECURITY_HEADERS } });
 }
 async function body(request) {
   if (Number(request.headers.get('Content-Length') || 0) > MAX_BODY_BYTES) throw new Error('Request body is too large.');
@@ -96,7 +106,14 @@ const routes = { '/api/register': register, '/api/contact': contact, '/api/subsc
 export default { async fetch(request, env) {
   const path = new URL(request.url).pathname;
   if (request.method === 'OPTIONS' && routes[path]) return new Response(null, { status: 204, headers: cors(request, env) });
-  if (request.method !== 'POST' || !routes[path]) return env.ASSETS.fetch(request);
+  if (request.method !== 'POST' || !routes[path]) {
+    const res = await env.ASSETS.fetch(request);
+    const newHeaders = new Headers(res.headers);
+    for (const [key, value] of Object.entries(SECURITY_HEADERS)) {
+      if (!newHeaders.has(key)) newHeaders.set(key, value);
+    }
+    return new Response(res.body, { status: res.status, statusText: res.statusText, headers: newHeaders });
+  }
   if (env.FORMS_ENABLED !== 'true') {
     return reply(request, env, 503, { ok: false, error: 'Forms are temporarily unavailable. Please try again later.' });
   }

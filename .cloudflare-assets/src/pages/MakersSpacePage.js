@@ -1,9 +1,9 @@
 
-const makersSpaceHero = 'src/assets/hero/makerhero.png';
-var workshopHero = 'src/assets/hero/hero_2.png';
-var hero1 = 'src/assets/hero/hero1.png';
-const buildingImg = 'src/assets/competitions/building.jpg';
-const droneImg = 'src/assets/competitions/drone.jpg';
+const makersSpaceHero = 'src/assets/hero/makerhero.webp';
+var workshopHero = 'src/assets/hero/hero_2.webp';
+var hero1 = 'src/assets/hero/hero1.webp';
+const buildingImg = 'src/assets/competitions/building.webp';
+const droneImg = 'src/assets/competitions/drone.webp';
 
 const MakersSpacePage = () => {
   const openComingSoon = () => {
@@ -36,6 +36,7 @@ const MakersSpacePage = () => {
     <div className="min-h-screen flex flex-col bg-[#e6d4c1] text-[#1f1713]">
       <Navigation />
 
+      <main id="main-content" className="flex-1">
       <section className="relative h-[440px] md:h-[560px] flex items-center justify-center overflow-hidden bg-slate-950 text-white">
         <img
           src={makersSpaceHero}
@@ -152,6 +153,7 @@ const MakersSpacePage = () => {
           </div>
         </div>
       </section>
+      </main>
 
       <Footer />
     </div>

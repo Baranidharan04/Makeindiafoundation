@@ -6,6 +6,7 @@ const IgnitePage = () => {
     <div className="min-h-screen flex flex-col bg-background">
       <Navigation />
 
+      <main id="main-content" className="flex-1">
       {/* Hero Section */}
       <section className="min-h-screen relative bg-slate-900 text-white overflow-hidden py-24 sm:py-32 flex items-center justify-center">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-[#006241]/30 via-slate-900 to-slate-900" />
@@ -219,6 +220,7 @@ const IgnitePage = () => {
           </Tabs>
         </div>
       </section>
+      </main>
 
       <Footer />
     </div>

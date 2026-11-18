@@ -5,7 +5,7 @@ const GuidelinesPage = () => {
     <div className="min-h-screen bg-background text-foreground flex flex-col">
       <Navigation />
 
-      <main className="flex-1 w-full pb-20">
+      <main id="main-content" className="flex-1 w-full pb-20">
         <section className="relative overflow-hidden bg-primary/5 pt-28 pb-16 sm:pt-36 sm:pb-24 mb-12 border-b border-primary/10">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-background to-background" />
           <div className="container relative mx-auto px-4 sm:px-6 lg:px-8 text-center">

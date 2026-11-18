@@ -235,15 +235,51 @@ const RegistrationModal = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [error, setError] = useState("");
     const [formTrack, setFormTrack] = useState(selectedTrack);
+    const modalRef = React.useRef(null);
+    const previousFocusRef = React.useRef(null);
 
     useEffect(() => {
         if (isOpen) {
+            previousFocusRef.current = document.activeElement;
             setFormTrack(selectedTrack);
             setIsSubmitted(false);
             setIsSubmitting(false);
             setError("");
+
+            const handleKeyDown = (e) => {
+                if (e.key === "Escape") {
+                    e.preventDefault();
+                    closeModal();
+                } else if (e.key === "Tab" && modalRef.current) {
+                    const focusable = modalRef.current.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+                    if (focusable.length === 0) return;
+                    const first = focusable[0];
+                    const last = focusable[focusable.length - 1];
+                    if (e.shiftKey && document.activeElement === first) {
+                        e.preventDefault();
+                        last.focus();
+                    } else if (!e.shiftKey && document.activeElement === last) {
+                        e.preventDefault();
+                        first.focus();
+                    }
+                }
+            };
+            window.addEventListener("keydown", handleKeyDown);
+
+            // Focus first input or close button
+            setTimeout(() => {
+                const firstInput = modalRef.current?.querySelector('input, button');
+                firstInput?.focus();
+            }, 50);
+
+            return () => {
+                window.removeEventListener("keydown", handleKeyDown);
+                if (previousFocusRef.current && typeof previousFocusRef.current.focus === 'function') {
+                    previousFocusRef.current.focus();
+                }
+            };
         }
-    }, [isOpen, selectedTrack]);
+    }, [isOpen, selectedTrack, closeModal]);
 
     if (!isOpen) return null;
 
@@ -283,35 +319,51 @@ const RegistrationModal = () => {
     };
 
     return (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-in fade-in duration-300">
-            <div className="bg-slate-950 text-white border border-slate-800 rounded-[2rem] w-full max-w-[500px] shadow-2xl p-6 sm:p-10 relative overflow-hidden max-h-[90vh] overflow-y-auto">
+        <div
+            className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-in fade-in duration-300"
+            onClick={(e) => { if (e.target === e.currentTarget) closeModal(); }}
+        >
+            <div
+                ref={modalRef}
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="registration-modal-title"
+                className="bg-slate-950 text-white border border-slate-800 rounded-[2rem] w-full max-w-[500px] shadow-2xl p-6 sm:p-10 relative overflow-hidden max-h-[90vh] overflow-y-auto"
+            >
                 <div className="absolute top-0 right-0 w-32 h-32 bg-primary/20 rounded-full blur-3xl -translate-y-16 translate-x-16" />
-                <button onClick={closeModal} className="absolute top-6 right-6 text-slate-400 hover:text-white transition-colors z-10"><Icon name="X" size={24} /></button>
+                <button
+                    type="button"
+                    aria-label="Close registration modal"
+                    onClick={closeModal}
+                    className="absolute top-6 right-6 text-slate-400 hover:text-white transition-colors z-10"
+                >
+                    <Icon name="X" size={24} aria-hidden="true" />
+                </button>
                 
                 {!isSubmitted ? (
                     <>
-                        <h2 className="text-2xl font-bold flex items-center gap-2 mb-2">
+                        <h2 id="registration-modal-title" className="text-2xl font-bold flex items-center gap-2 mb-2">
                             {selectedTrack === "arise" ? <Icon name="Rocket" className="text-blue-400 w-6 h-6" /> : <Icon name="Sparkles" className="text-emerald-400 w-6 h-6" />}
                             Register for Competition
                         </h2>
                         <p className="text-slate-400 mb-6 text-sm">Join the largest STEM movement in India. Fill out the details below to start your journey.</p>
                         
-                        <form onSubmit={handleSubmit} className="space-y-4">
+                        <form onSubmit={handleSubmit} className="space-y-4" aria-describedby={error ? "reg-error-msg" : undefined}>
                             <div className="space-y-1">
-                                <label className="text-slate-300 text-sm">Full Name</label>
-                                <Input required name="fullName" placeholder="Enter your full name" className="bg-slate-900 border-slate-700 text-white" />
+                                <label htmlFor="reg-fullName" className="text-slate-300 text-sm block font-medium">Full Name <span className="text-primary" aria-hidden="true">*</span></label>
+                                <Input id="reg-fullName" required name="fullName" placeholder="Enter your full name" className="bg-slate-900 border-slate-700 text-white" />
                             </div>
                             <div className="grid grid-cols-2 gap-4">
                                 <div className="space-y-1">
-                                    <label className="text-slate-300 text-sm">Grade</label>
-                                    <select required name="grade" className="flex h-10 w-full rounded-md border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
-                                        <option value="">Select</option>
+                                    <label htmlFor="reg-grade" className="text-slate-300 text-sm block font-medium">Grade <span className="text-primary" aria-hidden="true">*</span></label>
+                                    <select id="reg-grade" required name="grade" className="flex h-10 w-full rounded-md border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+                                        <option value="">Select Grade</option>
                                         {[6, 7, 8, 9, 10, 11, 12].map(g => <option key={g} value={g}>Grade {g}</option>)}
                                     </select>
                                 </div>
                                 <div className="space-y-1">
-                                    <label className="text-slate-300 text-sm">Track</label>
-                                    <select required value={formTrack} onChange={(e) => setFormTrack(e.target.value)} disabled={selectedTrack === "arise" || selectedTrack === "ignite"} className="flex h-10 w-full rounded-md border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:opacity-50 disabled:cursor-not-allowed">
+                                    <label htmlFor="reg-track" className="text-slate-300 text-sm block font-medium">Track <span className="text-primary" aria-hidden="true">*</span></label>
+                                    <select id="reg-track" required value={formTrack} onChange={(e) => setFormTrack(e.target.value)} disabled={selectedTrack === "arise" || selectedTrack === "ignite"} className="flex h-10 w-full rounded-md border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:opacity-50 disabled:cursor-not-allowed">
                                         <option value="general">General</option>
                                         <option value="arise">ARISE (9-12)</option>
                                         <option value="ignite">IGNITE (6-8)</option>
@@ -319,8 +371,8 @@ const RegistrationModal = () => {
                                 </div>
                             </div>
                             <div className="space-y-1">
-                                <label className="text-slate-300 text-sm">Stream of Study</label>
-                                <select required name="stream" className="flex h-10 w-full rounded-md border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+                                <label htmlFor="reg-stream" className="text-slate-300 text-sm block font-medium">Stream of Study <span className="text-primary" aria-hidden="true">*</span></label>
+                                <select id="reg-stream" required name="stream" className="flex h-10 w-full rounded-md border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
                                     <option value="">Select Stream</option>
                                     <option value="science">Science (PCM/PCB)</option>
                                     <option value="commerce">Commerce</option>
@@ -330,37 +382,37 @@ const RegistrationModal = () => {
                                 </select>
                             </div>
                             <div className="space-y-1">
-                                <label className="text-slate-300 text-sm">School Name</label>
-                                <Input required name="school" placeholder="Enter your school name" className="bg-slate-900 border-slate-700 text-white" />
+                                <label htmlFor="reg-school" className="text-slate-300 text-sm block font-medium">School Name <span className="text-primary" aria-hidden="true">*</span></label>
+                                <Input id="reg-school" required name="school" placeholder="Enter your school name" className="bg-slate-900 border-slate-700 text-white" />
                             </div>
                             <div className="space-y-1">
-                                <label className="text-slate-300 text-sm">Email Address</label>
-                                <Input required name="email" type="email" placeholder="your@email.com" className="bg-slate-900 border-slate-700 text-white" />
+                                <label htmlFor="reg-email" className="text-slate-300 text-sm block font-medium">Email Address <span className="text-primary" aria-hidden="true">*</span></label>
+                                <Input id="reg-email" required name="email" type="email" placeholder="your@email.com" className="bg-slate-900 border-slate-700 text-white" />
                             </div>
                             <div className="space-y-1">
-                                <label className="text-slate-300 text-sm">Mobile Number</label>
-                                <Input required name="mobile" type="tel" placeholder="Enter your mobile number" className="bg-slate-900 border-slate-700 text-white" />
+                                <label htmlFor="reg-mobile" className="text-slate-300 text-sm block font-medium">Mobile Number <span className="text-primary" aria-hidden="true">*</span></label>
+                                <Input id="reg-mobile" required name="mobile" type="tel" placeholder="Enter your mobile number" className="bg-slate-900 border-slate-700 text-white" />
                             </div>
                             <div className="space-y-1">
-                                <label className="text-slate-300 text-sm">Brief Project Idea (Optional)</label>
-                                <Textarea name="projectIdea" placeholder="Tell us what you want to build..." className="bg-slate-900 border-slate-700 text-white resize-none h-20" />
+                                <label htmlFor="reg-projectIdea" className="text-slate-300 text-sm block font-medium">Brief Project Idea (Optional)</label>
+                                <Textarea id="reg-projectIdea" name="projectIdea" placeholder="Tell us what you want to build..." className="bg-slate-900 border-slate-700 text-white resize-none h-20" />
                             </div>
-                            {error && <p className="text-red-400 text-sm">{error}</p>}
+                            {error && <p id="reg-error-msg" role="alert" className="text-red-400 text-sm font-medium">{error}</p>}
                             <Button type="submit" disabled={isSubmitting} className="w-full bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-500 hover:to-emerald-500 font-bold py-6 text-lg rounded-xl mt-4 disabled:opacity-60 disabled:cursor-not-allowed">
                                 {isSubmitting ? "Submitting..." : "Complete Registration"}
                             </Button>
                         </form>
                     </>
                 ) : (
-                    <div className="py-12 flex flex-col items-center text-center space-y-6">
+                    <div className="py-12 flex flex-col items-center text-center space-y-6" role="status" aria-live="polite">
                         <div className="w-20 h-20 bg-emerald-500/20 rounded-full flex items-center justify-center animate-bounce">
-                            <Icon name="CheckCircle2" className="text-emerald-500 w-12 h-12" />
+                            <Icon name="CheckCircle2" className="text-emerald-500 w-12 h-12" aria-hidden="true" />
                         </div>
                         <div className="space-y-2">
                             <h2 className="text-3xl font-bold">Awesome!</h2>
                             <p className="text-slate-400">You've successfully registered for the competition. Check your email for next steps and project guidelines.</p>
                         </div>
-                        <Button onClick={closeModal} className="bg-white text-black hover:bg-slate-200 rounded-full px-8">Close Window</Button>
+                        <Button type="button" onClick={closeModal} className="bg-white text-black hover:bg-slate-200 rounded-full px-8">Close Window</Button>
                     </div>
                 )}
             </div>
@@ -432,3 +484,4 @@ window.FileText = FileText; window.Calendar = Calendar; window.Leaf = Leaf; wind
 window.Rocket = Rocket; window.ChevronLeft = ChevronLeft; window.Activity = Activity; window.User = User;
 window.Database = Database; window.MessageSquare = MessageSquare; window.ArrowRight = ArrowRight; window.Instagram = Instagram;
 window.Globe = Globe; window.Layers = Layers; window.Eye = Eye; window.Sparkles = Sparkles; window.Settings = Settings;
+window.Play = window.lucide?.icons?.Play || window.lucide?.Play; window.Pause = window.lucide?.icons?.Pause || window.lucide?.Pause;

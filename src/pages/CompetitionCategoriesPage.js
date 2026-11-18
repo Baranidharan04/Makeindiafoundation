@@ -174,6 +174,44 @@ const CATEGORIES = [
 const CompetitionCategoriesPage = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState(null);
+  const previousFocusRef = React.useRef(null);
+  const modalRef = React.useRef(null);
+
+  React.useEffect(() => {
+    if (selectedCategory) {
+      previousFocusRef.current = document.activeElement;
+      const handleKeyDown = (e) => {
+        if (e.key === "Escape") {
+          e.preventDefault();
+          setSelectedCategory(null);
+        } else if (e.key === "Tab" && modalRef.current) {
+          const focusable = modalRef.current.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+          if (focusable.length === 0) return;
+          const first = focusable[0];
+          const last = focusable[focusable.length - 1];
+          if (e.shiftKey && document.activeElement === first) {
+            e.preventDefault();
+            last.focus();
+          } else if (!e.shiftKey && document.activeElement === last) {
+            e.preventDefault();
+            first.focus();
+          }
+        }
+      };
+      window.addEventListener("keydown", handleKeyDown);
+      setTimeout(() => {
+        const firstBtn = modalRef.current?.querySelector('button');
+        firstBtn?.focus();
+      }, 50);
+
+      return () => {
+        window.removeEventListener("keydown", handleKeyDown);
+        if (previousFocusRef.current && typeof previousFocusRef.current.focus === 'function') {
+          previousFocusRef.current.focus();
+        }
+      };
+    }
+  }, [selectedCategory]);
 
   const filteredCategories = CATEGORIES.filter(cat =>
     cat.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -185,7 +223,7 @@ const CompetitionCategoriesPage = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
 
-      <main className="container mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-12 sm:pt-32">
+      <main id="main-content" className="container mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-12 sm:pt-32">
         <div className="max-w-4xl mx-auto text-center mb-16">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 text-foreground" style={{ textShadow: '2px 2px 0px rgba(80, 20, 100, 0.4)' }}>
             Competition Categories
@@ -196,9 +234,10 @@ const CompetitionCategoriesPage = () => {
           </p>
 
           <div className="relative max-w-2xl mx-auto">
-            <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground w-5 h-5" />
+            <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground w-5 h-5" aria-hidden="true" />
             <input
               type="text"
+              aria-label="Search categories by name, code or description"
               placeholder="Search categories (e.g. AI, Biology, Physics...)"
               className="w-full pl-12 pr-4 py-4 rounded-2xl border border-border bg-card text-foreground focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all shadow-sm"
               value={searchQuery}
@@ -213,8 +252,17 @@ const CompetitionCategoriesPage = () => {
             return (
               <Card
                 key={category.code}
-                className="group h-full flex flex-col hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 border-border/50 bg-card/50 backdrop-blur-sm cursor-pointer"
+                role="button"
+                tabIndex={0}
+                aria-label={`View details for category ${category.title} (${category.code})`}
+                className="group h-full flex flex-col hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 border-border/50 bg-card/50 backdrop-blur-sm cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary"
                 onClick={() => setSelectedCategory(category)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    setSelectedCategory(category);
+                  }
+                }}
               >
                 <CardHeader className="relative pb-4">
                   <div className={`w-14 h-14 rounded-2xl ${category.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-sm`}>
@@ -269,22 +317,33 @@ const CompetitionCategoriesPage = () => {
 
       {/* Category Detail Modal */}
       {selectedCategory && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-300">
-          <Card className="w-full max-w-3xl max-h-[90vh] overflow-hidden flex flex-col shadow-2xl border-primary/20 animate-in zoom-in-95 duration-300">
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-300"
+          onClick={(e) => { if (e.target === e.currentTarget) setSelectedCategory(null); }}
+        >
+          <Card
+            ref={modalRef}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="category-detail-title"
+            className="w-full max-w-3xl max-h-[90vh] overflow-hidden flex flex-col shadow-2xl border-primary/20 animate-in zoom-in-95 duration-300"
+          >
             <div className={`p-8 ${selectedCategory.color} relative`}>
               <button
+                type="button"
+                aria-label="Close category details"
                 onClick={() => setSelectedCategory(null)}
                 className="absolute top-6 right-6 p-2 rounded-full bg-white/20 hover:bg-white/40 text-current transition-colors"
               >
-                <X className="w-6 h-6" />
+                <X className="w-6 h-6" aria-hidden="true" />
               </button>
               <div className="flex items-center gap-6">
                 <div className="w-20 h-20 rounded-3xl bg-white flex items-center justify-center shadow-xl">
-                  <selectedCategory.icon className="w-10 h-10" />
+                  <selectedCategory.icon className="w-10 h-10" aria-hidden="true" />
                 </div>
                 <div>
                   <div className="text-xs font-black opacity-60 uppercase tracking-widest mb-1">{selectedCategory.code}</div>
-                  <h2 className="text-3xl sm:text-4xl font-heading font-bold">{selectedCategory.title}</h2>
+                  <h2 id="category-detail-title" className="text-3xl sm:text-4xl font-heading font-bold">{selectedCategory.title}</h2>
                 </div>
               </div>
             </div>
@@ -293,7 +352,7 @@ const CompetitionCategoriesPage = () => {
               <div className="space-y-8">
                 <div>
                   <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
-                    <Info className="w-5 h-5 text-primary" />
+                    <Info className="w-5 h-5 text-primary" aria-hidden="true" />
                     Description
                   </h3>
                   <p className="text-muted-foreground text-lg leading-relaxed text-justify">
@@ -303,13 +362,13 @@ const CompetitionCategoriesPage = () => {
 
                 <div>
                   <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
-                    <Layers className="w-5 h-5 text-primary" />
+                    <Layers className="w-5 h-5 text-primary" aria-hidden="true" />
                     Sub-categories
                   </h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {selectedCategory.subcategories.map((sub) => (
                       <div key={sub} className="flex items-center gap-3 p-3 rounded-xl bg-muted/30 border border-border/50 hover:border-primary/30 transition-colors">
-                        <div className="w-2 h-2 rounded-full bg-primary" />
+                        <div className="w-2 h-2 rounded-full bg-primary" aria-hidden="true" />
                         <span className="font-medium text-foreground/90">{sub}</span>
                       </div>
                     ))}
@@ -318,10 +377,11 @@ const CompetitionCategoriesPage = () => {
 
                 <div className="pt-6 border-t border-border flex flex-col sm:flex-row gap-4 items-center justify-between">
                   <div className="text-sm text-muted-foreground flex items-center gap-2">
-                    <AlertTriangle className="w-4 h-4 text-amber-500" />
+                    <AlertTriangle className="w-4 h-4 text-amber-500" aria-hidden="true" />
                     Always check full guidelines before starting
                   </div>
                   <Button
+                    type="button"
                     onClick={() => setSelectedCategory(null)}
                     className="w-full sm:w-auto rounded-full px-8"
                   >

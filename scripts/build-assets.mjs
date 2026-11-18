@@ -7,6 +7,7 @@ const frontendPaths = ['index.html', 'src', 'public'];
 const assetExtensions = new Set([
   '.html', '.js', '.css', '.png', '.jpg', '.jpeg', '.webp', '.gif',
   '.svg', '.ico', '.avif', '.woff', '.woff2', '.ttf', '.otf',
+  '.txt', '.xml',
 ]);
 const privateName = /(?:^|[-_.])(credentials?|secrets?|private[-_.]?key|service[-_.]?account)(?:[-_.]|$)/i;
 

@@ -1,8 +1,8 @@
 const experimentImg = '/src/assets/awesome_cool_science_experiments_for_kids.webp';
-var fewoImg = 'src/assets/technology.jpg';
-const technologyImg = '/src/assets/technology.jpg';
-const engineerImg = '/src/assets/engineering.jpg';
-const teamPhoto = '/src/assets/team-photo.jpg';
+var fewoImg = '/src/assets/technology.webp';
+const technologyImg = '/src/assets/technology.webp';
+const engineerImg = '/src/assets/engineering.webp';
+const teamPhoto = '/src/assets/team-photo.webp';
 
 const Mission = () => {
   const [activeCard, setActiveCard] = React.useState(0);
@@ -53,9 +53,11 @@ const Mission = () => {
             {STEM_CARDS.map((card, index) => (
               <button
                 key={card.title}
+                type="button"
+                aria-pressed={activeCard === index}
+                onClick={() => setActiveCard(index)}
                 onMouseEnter={() => setActiveCard(index)}
                 onFocus={() => setActiveCard(index)}
-                onClick={() => setActiveCard(index)}
                 className={`w-full text-left rounded-3xl p-6 border border-border/60 transition-all duration-300 overflow-hidden group relative ${activeCard === index ? "-translate-x-2 shadow-2xl border-primary/70" : "hover:-translate-x-1 hover:shadow-lg"
                   }`}
               >
@@ -67,6 +69,7 @@ const Mission = () => {
                   <img
                     src={card.image}
                     alt={card.title}
+                    loading="lazy"
                     className={`w-16 h-16 rounded-xl object-cover transition-transform duration-500 ${activeCard === index ? "scale-110" : "scale-100"
                       }`}
                   />
@@ -84,6 +87,7 @@ const Mission = () => {
               <img
                 src={STEM_CARDS[activeCard].image}
                 alt={STEM_CARDS[activeCard].title}
+                loading="lazy"
                 className="w-full h-full object-cover transition-all duration-500 hover:scale-105"
               />
               <div className="absolute inset-0 bg-black/40" />
@@ -95,7 +99,7 @@ const Mission = () => {
               </div>
             </div>
             <div className="p-8">
-              <h4 className="text-xl font-semibold text-foreground mb-4">Why it matters</h4>
+              <h3 className="text-xl font-semibold text-foreground mb-4">Why it matters</h3>
               <p className="text-muted-foreground leading-relaxed">
                 {STEM_CARDS[activeCard].detail}
               </p>

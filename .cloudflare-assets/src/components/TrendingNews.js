@@ -137,13 +137,14 @@ const TrendingNews = () => {
                   <img
                     src={item.image}
                     alt={item.title}
+                    loading="lazy"
                     className="w-full h-full object-cover rounded-lg"
                     onError={(e) => { e.target.style.display = 'none'; }}
                   />
                 </div>
               )}
               <div className="flex items-center mb-4">
-                <img src={item.logo} alt={item.source} className="w-8 h-8 mr-3 rounded" />
+                <img src={item.logo} alt={item.source} className="h-6 w-auto max-w-[80px] object-contain mr-3 rounded" />
                 <span className="text-sm text-muted-foreground"> Credits: {item.source}</span>
               </div>
               <h3 className="text-xl font-semibold mb-2 text-foreground">{item.title}</h3>
@@ -152,10 +153,11 @@ const TrendingNews = () => {
                 href={item.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center text-primary hover:text-primary/80 font-medium"
+                aria-label={`Read more: ${item.title}`}
+                className="inline-flex items-center text-primary hover:text-primary/80 font-medium focus:outline-none focus:underline"
               >
                 Read more
-                <ExternalLink className="w-4 h-4 ml-1" />
+                <ExternalLink className="w-4 h-4 ml-1" aria-hidden="true" />
               </a>
             </div>
           ))}

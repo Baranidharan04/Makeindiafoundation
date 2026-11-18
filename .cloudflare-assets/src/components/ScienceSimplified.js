@@ -41,7 +41,7 @@ const ScienceSimplified = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <div className="flex flex-col items-center justify-center bg-gradient-to-b from-primary/10 to-background py-20 px-8">
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold mb-6 text-foreground" style={{ textShadow: '2px 2px 0px rgba(80, 20, 100, 0.4)' }}>Science Simplified</h1>
+        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold mb-6 text-foreground" style={{ textShadow: '2px 2px 0px rgba(80, 20, 100, 0.4)' }}>Science Simplified</h2>
         <p className="text-lg text-muted-foreground max-w-3xl text-center">
           Dive into the world of science with these simplified explanations, engaging visuals, and real-world applications. Whether you're a student, educator, or just curious about how things work, Science Simplified makes complex scientific concepts easy to understand and fun to explore.
         </p>

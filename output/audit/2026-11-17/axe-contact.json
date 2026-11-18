@@ -1,0 +1,202 @@
+{
+  "url": "https://makeindiafoundation.org/#/contact",
+  "title": "STEM Spark Studio - Make India Foundation",
+  "modalOpen": false,
+  "violations": [
+    {
+      "id": "button-name",
+      "impact": "critical",
+      "count": 1,
+      "nodes": [
+        {
+          "html": "<button class=\"md:hidden p-2 rounded-lg transition-colors text-white hover:bg-white/10\">",
+          "target": [
+            ".md\\:hidden"
+          ],
+          "summary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+        }
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "count": 7,
+      "nodes": [
+        {
+          "html": "<span class=\"text-2xl font-heading font-bold transition-colors text-white\">Make India</span>",
+          "target": [
+            ".text-2xl.text-white.font-heading"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.41 (foreground color: #ffffff, background color: #e7d6c5, font size: 18.0pt (24px), font weight: bold). Expected contrast ratio of 3:1"
+        },
+        {
+          "html": "<span class=\"text-xs font-bold tracking-[0.2em] text-orange-500 uppercase leading-none mt-0.5\">Foundation</span>",
+          "target": [
+            ".tracking-\\[0\\.2em\\]"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.97 (foreground color: #f97316, background color: #e7d6c5, font size: 9.0pt (12px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors bg-primary text-primary-foreground border-transparent mb-4 bg-primary/10 text-primary border-primary/20 px-4 py-1.5 text-sm\">Contact Support</span>",
+          "target": [
+            ".px-2\\.5"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.45 (foreground color: #f9f5f1, background color: #dfcab9, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<p class=\"text-lg text-muted-foreground leading-relaxed\">Have questions about the competition, workshops, or how to get started? Our dedicated support team is ready to assist you on your STEM journey.</p>",
+          "target": [
+            ".leading-relaxed.text-lg"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.32 (foreground color: #755c57, background color: #e7d6c5, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<a href=\"https://wa.me/919876543210\" target=\"_blank\" rel=\"noopener noreferrer\">Chat with us on WhatsApp \u2192</a>",
+          "target": [
+            "a[href=\"https://wa.me/919876543210\"]"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.88 (foreground color: #97624e, background color: #ede0d4, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<span class=\"block text-sm font-bold text-orange-500\">Foundation</span>",
+          "target": [
+            ".text-orange-500.block.font-bold"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.16 (foreground color: #f97316, background color: #ede0d4, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "html": "<p class=\"text-sm text-muted-foreground\">Get project ideas, competition updates, and resources delivered to your inbox.</p>",
+          "target": [
+            ".lg\\:grid-cols-2.gap-6.grid > div:nth-child(1) > p"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.48 (foreground color: #755c57, background color: #e9dacd, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "id": "heading-order",
+      "impact": "moderate",
+      "count": 2,
+      "nodes": [
+        {
+          "html": "<h4 class=\"font-heading font-semibold text-lg text-foreground mb-3\">Email</h4>",
+          "target": [
+            ".p-6.hover\\:border-primary\\/50.hover\\:-translate-y-1:nth-child(1) > .space-x-4.items-start.flex > .flex-1 > .font-semibold.mb-3"
+          ],
+          "summary": "Fix any of the following:\n  Heading order invalid"
+        },
+        {
+          "html": "<h5 class=\"font-medium text-foreground mb-3\">Join Our Community</h5>",
+          "target": [
+            "div:nth-child(4) > h5"
+          ],
+          "summary": "Fix any of the following:\n  Heading order invalid"
+        }
+      ]
+    },
+    {
+      "id": "nested-interactive",
+      "impact": "serious",
+      "count": 1,
+      "nodes": [
+        {
+          "html": "<button class=\"inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 mt-4 text-primary hover:text-primary-dark hover:bg-primary/10 p-0 h-auto\">",
+          "target": [
+            ".hover\\:bg-accent"
+          ],
+          "summary": "Fix any of the following:\n  Element has focusable descendants"
+        }
+      ]
+    },
+    {
+      "id": "page-has-heading-one",
+      "impact": "moderate",
+      "count": 1,
+      "nodes": [
+        {
+          "html": "<html lang=\"en\">",
+          "target": [
+            "html"
+          ],
+          "summary": "Fix all of the following:\n  Page must have a level-one heading"
+        }
+      ]
+    },
+    {
+      "id": "select-name",
+      "impact": "critical",
+      "count": 1,
+      "nodes": [
+        {
+          "html": "<select name=\"category\" class=\"flex h-10 w-full rounded-md border border-input bg-background/50 px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring\">",
+          "target": [
+            "select"
+          ],
+          "summary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+        }
+      ]
+    }
+  ],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "count": 11
+    }
+  ],
+  "formControls": [
+    {
+      "tag": "INPUT",
+      "id": "",
+      "name": "name",
+      "ariaLabel": null,
+      "labelCount": 0,
+      "required": false,
+      "placeholder": "Arjun Sharma"
+    },
+    {
+      "tag": "INPUT",
+      "id": "",
+      "name": "email",
+      "ariaLabel": null,
+      "labelCount": 0,
+      "required": false,
+      "placeholder": "arjun@email.com"
+    },
+    {
+      "tag": "INPUT",
+      "id": "",
+      "name": "phone",
+      "ariaLabel": null,
+      "labelCount": 0,
+      "required": false,
+      "placeholder": "+91 98765 43210"
+    },
+    {
+      "tag": "SELECT",
+      "id": "",
+      "name": "category",
+      "ariaLabel": null,
+      "labelCount": 0,
+      "required": false,
+      "placeholder": null
+    },
+    {
+      "tag": "TEXTAREA",
+      "id": "",
+      "name": "message",
+      "ariaLabel": null,
+      "labelCount": 0,
+      "required": false,
+      "placeholder": "Tell us about your query or project idea..."
+    },
+    {
+      "tag": "INPUT",
+      "id": "",
+      "name": "",
+      "ariaLabel": null,
+      "labelCount": 0,
+      "required": false,
+      "placeholder": "Your email address"
+    }
+  ]
+}
